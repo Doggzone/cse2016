@@ -25,8 +25,8 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 
 | 주 | 날짜 | 주제 | 실습 | 숙제 |
 |:----:|:-----:|:-----:|:-----:|:-----:|
-|  1  | 9/3(목) | Introduction  | - | - |
-|  2  | 9/7(월), 9/10(목) | Simple Java Applications  | #1 | - |
+|  1  | 9/3(목) | [Introduction](https://drive.google.com/file/d/18v2oo3pcNxT-gkpXTZVx-hVcFLDsE1nh/view?usp=sharing)  | - | - |
+|  2  | 9/7(월), 9/10(목) | [Simple Java Applications](https://drive.google.com/file/d/1Vwdb_S88_OjOOM8E8sfpx7-SUyj4uF-y/view?usp=sharing)  | #1 | - |
 |  3  | 9/14(월), 9/17(목) | Arithmetic and Variables | #2 | #1 |
 |  4  | 9/21(월), 9/24(목) | Input, Output, and State | #3 | #2 |
 |  5  | 9/28(월), 10/5(월) | Component Structure: Method and Class Building | #4 | #3 |
