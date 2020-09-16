@@ -3,7 +3,7 @@
 ### 교과목개요
 
 객체 지향 프로그래밍 패러다임으로 소프트웨어의 부품 구조를 설계하고 구현하는 방법을 배운다.
-사용 언어는 Java 11이다.
+사용 언어는 Java 15이다.
 
 ### 수업목표
 
@@ -13,8 +13,8 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 - David Schmidt, [Programming Principles in Java: Architectures and Interfaces](http://people.cs.ksu.edu/~schmidt/CIS200/home.html)
 
 ### 언어 및 IDE
-- [JDK 11 Documentation](https://docs.oracle.com/en/java/javase/11/)
-- [repl.it](https://repl.it/~)
+- [JDK 15 Documentation](https://docs.oracle.com/en/java/javase/15/index.html)
+- [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
 
 ### 수업 시간 및 장소
 
@@ -28,20 +28,19 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 |:----:|:-----:|:-----:|:-----:|:-----:|
 |  1  | 9/3(목) | [Introduction](https://drive.google.com/file/d/18v2oo3pcNxT-gkpXTZVx-hVcFLDsE1nh/view?usp=sharing)  | - | - |
 |  2  | 9/7(월), 9/10(목) | [Simple Java Applications](https://drive.google.com/file/d/1Vwdb_S88_OjOOM8E8sfpx7-SUyj4uF-y/view?usp=sharing)  | #1 | - |
-|  3  | 9/14(월), 9/17(목) | [Arithmetic and Variables](https://drive.google.com/file/d/1g9VjYyIMLd-EEbDCXlmFhghIh-tMyHp_/view?usp=sharing) | #2 | #1 |
-|  4  | 9/21(월), 9/24(목) | Input, Output, and State | #3 | #2 |
-|  5  | 9/28(월), 10/5(월) | Component Structure: Method and Class Building | #4 | #3 |
-|  6  | 10/8(목), 10/12(월) | Control Structure: Conditional Statements and Software Architecture | #5 | #4 |
-|  7  | 10/15(목), 10/19(월) | Patterns of Repetition: Iteration and Recursion | #6 | #5 |
-|  8  | 10/22(목) | 코딩 시험 1 | - | - |
-|  9  | 10/26(월), 10/29(목) | Data Structure: Arrays | #7 | #6 |
-|  10 | 11/2(월), 11/5(목) | Programming to Interfaces | #8 | #7 |
-|  11 | 11/9(월), 11/12(목) | Graphical User Interfaces and Event-Driven Programming | #9 | #8 |
-|  12 | 11/16(월), 11/19(목) | Text and File Processing | #10 | - |
-|  13 | 11/23(월), 11/26(목) | Team Project Proposal Presentation | - | - |
-|  14 | 11/30(월), 12/3(목) | Team Project Design Presentation | - | - |
-|  15 | 12/7(월), 12/10(목) | Team Project Demo | - | - |
-|  16 | 12/14(월) | 코딩 시험 2 | - | - |
+|  3  | 9/14(월), 9/17(목), 9/21(월) | [Arithmetic and Variables](https://drive.google.com/file/d/1g9VjYyIMLd-EEbDCXlmFhghIh-tMyHp_/view?usp=sharing) | #2 | #1 |
+|  4  | 9/24(목), 9/28(월) | Input, Output, and State | #3 | #2 |
+|  5  | 10/5(월), 10/8(목) | Component Structure: Method and Class Building | #4 | #3 |
+|  6  | 10/12(월), 10/15(목) | Control Structure: Conditional Statements and Software Architecture | #5 | #4 |
+|  7  | 10/19(월), 10/22(목) | Patterns of Repetition: Iteration and Recursion | #6 | #5 |
+|  8  | 10/26(월) 또는 10/29(목) | 코딩 시험 1 | - | - |
+|  9  | 11/2(월), 11/5(목) | Data Structure: Arrays | #7 | #6 |
+|  10 | 11/9(월), 11/12(목) | Programming to Interfaces | #8 | #7 |
+|  11 | 11/16(월), 11/19(목) | Graphical User Interfaces and Event-Driven Programming | #9 | #8 |
+|  12 | 11/23(월), 11/26(목) | Team Project Design PresentationT | #10 | - |
+|  13 | 11/30(월), 12/3(목) | Text and File Processing | - | - |
+|  14 | 12/7(월), 12/10(목) | Team Project Demo | - | - |
+|  15 | 12/14(월) | 코딩 시험 2 | - | - |
 
 ### 평가
 
