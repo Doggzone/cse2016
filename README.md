@@ -20,7 +20,6 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 
 -  시간 : 월 15:00~17:00, 목 15:00~17:00
 -  강의 : Zoom 실시간 온라인
--  실습 : [repl.it Classroom](https://repl.it/classroom/invite/uhkOKHz)
 
 ### 주별 수업 계획
 
