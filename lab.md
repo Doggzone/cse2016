@@ -4,7 +4,7 @@ layout: page
 title: 실습
 ---
 
-## Lab #2. Arithmetic and Variables (2020/9/17)
+## Lab #2. Arithmetic and Variables (2020/9/21,월)
 
 ### 1. 마일을 킬로미터로 환산 (예상소요시간 20분)
 
