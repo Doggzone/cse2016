@@ -13,7 +13,6 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 - David Schmidt, [Programming Principles in Java: Architectures and Interfaces](http://people.cs.ksu.edu/~schmidt/CIS200/home.html)
 
 ### 언어 및 IDE
-- [JDK 15 Download](https://jdk.java.net/15/)
 - [JDK 15 Documentation](https://docs.oracle.com/en/java/javase/15/index.html)
 - [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
 
