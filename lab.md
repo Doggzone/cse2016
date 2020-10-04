@@ -4,6 +4,149 @@ layout: page
 title: 실습
 ---
 
+## Lab #4. Component Structure: Method and Class Building (2020/10/5,8)
+
+### 1. MathOperations 클래스에 역수 계산 메소드 장착하기
+
+다음의 명세를 참고하여 `MathOperations` 클래스에 4개의 메소드를 구현하자.
+
+![inverse](https://i.imgur.com/gvZ81AP.png)
+
+다음의 구동 클래스를 실행하여 아래와 같이 실행 결과가 실행창에 나타나는지 확인하자.
+
+```
+import java.text.DecimalFormat;
+
+public class TestMathOperations {
+
+	public static void main(String[] args) {
+		MathOperations calculator = new MathOperations();
+		
+		System.out.println(calculator.inverse(3));
+		System.out.println(calculator.inverse(7));
+		
+		calculator.printInverse(3);
+		calculator.printInverse(7);
+		
+		calculator.printInverse(3, "0.0");
+		calculator.printInverse(7, "0.00000");
+		
+		DecimalFormat one_place = new DecimalFormat("0.0");
+		calculator.printInverse(3, one_place);
+		DecimalFormat five_places = new DecimalFormat("0.00000");
+		calculator.printInverse(7, five_places);
+	}
+}
+```
+
+```
+0.3333333333333333
+0.14285714285714285
+0.333
+0.143
+0.3
+0.14286
+0.3
+0.14286
+```
+
+
+### 2. `MyWriter` 클래스 단장하기
+
+![MyWriter](https://i.imgur.com/qgX2tb5.png)
+
+수업 시간에 공부한 `MyWriter` 클래스는 배경이 흰색이다.
+위와 같이 적절히 테두리를 둘러 보기 좋게 하려고 한다.
+색깔과 두께는 디자이너의 자유 선택에 맡긴다.
+테두리를 칠하는 역할을 하는 다음 사양의 내부 전용 메소드를 
+추가하여 활용해야 한다.
+```
+private void makeBorder(Graphics pen)
+```
+
+수업 시간에 공부한 다음 클래스를 활용하여 확장한다.
+
+```
+import java.awt.*; 
+import javax.swing.*;
+
+/* MyWriter - 문장를 디스플레이할 그래픽스 윈도를 만듬 */
+public class MyWriter extends JPanel {
+	private int width; // 프레임 너비 
+	private int height; // 프레임 높이 
+	private String sentence = ""; // 인쇄할 문장
+	private int x_position; // 문장 위치 x 좌표 
+	private int y_position; // 문장 위치 y 좌표 
+	
+	/* MyWriter - constructor 메소드 
+	 * @param w - 창의 너비 
+	 * @param h - 창의 높이 */
+	public MyWriter(int w, int h) {
+		width = w;
+		height = h;
+		x_position = width / 5;
+		y_position = height / 2;
+		JFrame my_frame = new JFrame();
+		my_frame.getContentPane().add(this);
+		my_frame.setTitle("MyWriter");
+		my_frame.setSize(width, height + 22);
+		my_frame.setVisible(true);
+		my_frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	}
+	
+	/* paintComponent - 화가 메소 
+	 * @param g - 그래픽 펜 */
+	public void paintComponent(Graphics g) {
+		makeBorder(g);
+		g.setColor(Color.red);
+		g.drawString(sentence, x_position, y_position);
+	}
+	
+	/** makeBorder paints the frame’s border.
+	* @param pen - the graphics pen used to paint the border */
+	private void makeBorder(Graphics pen) { 
+		pen.setColor(Color.green);
+		pen.fillRect(0, 0, width, height); // paint entire window blue 
+		int size = 15;
+		pen.setColor(Color.white);
+		pen.fillRect(size, size, width - (2 * size), height - (2 * size));
+	}
+	
+	/* writeSentence - 창에 문자열 인쇄 
+	 * @param s - 인쇄할 문자열 */
+	public void writeSentence(String s) {
+		sentence = s;
+		this.repaint();
+	}
+	
+	/* repositionSentence - 위치를 이동하여 창에 문자열 인쇄 
+	 * @param x - x 좌표 
+	 * @param y - y 좌표 */
+	public void repositionSentence(int x, int y) {
+		x_position = x;
+		y_position = y;
+		this.writeSentence(sentence); // this 생략 가능 
+	}
+}
+```
+
+```
+import javax.swing.*;
+
+public class MyExample {
+
+	public static void main(String[] args) {
+		int width = 300;
+		int height = 200;
+		MyWriter writer = new MyWriter(width, height);
+		String s = JOptionPane.showInputDialog("보고 싶은 문장 넣어주세요.");
+		writer.writeSentence(s);
+	}
+}
+```
+
+
+
 ## Lab #3. Input, Output & State (2020/9/24,28)
 
 
