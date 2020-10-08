@@ -97,19 +97,8 @@ public class MyWriter extends JPanel {
 	/* paintComponent - 화가 메소 
 	 * @param g - 그래픽 펜 */
 	public void paintComponent(Graphics g) {
-		makeBorder(g);
 		g.setColor(Color.red);
 		g.drawString(sentence, x_position, y_position);
-	}
-	
-	/** makeBorder paints the frame’s border.
-	* @param pen - the graphics pen used to paint the border */
-	private void makeBorder(Graphics pen) { 
-		pen.setColor(Color.green);
-		pen.fillRect(0, 0, width, height); // paint entire window blue 
-		int size = 15;
-		pen.setColor(Color.white);
-		pen.fillRect(size, size, width - (2 * size), height - (2 * size));
 	}
 	
 	/* writeSentence - 창에 문자열 인쇄 
@@ -139,6 +128,7 @@ public class MyExample {
 		int width = 300;
 		int height = 200;
 		MyWriter writer = new MyWriter(width, height);
+		writer.positionSentence(80, 80);
 		String s = JOptionPane.showInputDialog("보고 싶은 문장 넣어주세요.");
 		writer.writeSentence(s);
 	}
