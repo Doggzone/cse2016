@@ -32,14 +32,14 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 |  5  | 10/5(월), 10/8(목) | [Component Structure: Method and Class Building](https://drive.google.com/file/d/1UiJqD4HANsGrWdxZe5La4HEmplYhycko/view?usp=sharing) | #4 | #3 |
 |  6  | 10/12(월), 10/15(목) | Control Structure: Conditional Statements and Software Architecture | #5 | #4 |
 |  7  | 10/19(월), 10/22(목) | Patterns of Repetition: Iteration and Recursion | #6 | #5 |
-|  8  | 10/26(월) 또는 10/29(목) | 코딩 시험 1 | - | - |
+|  8  | 10/26(월) | (오프라인) 코딩 시험 1 | - | - |
 |  9  | 11/2(월), 11/5(목) | Data Structure: Arrays | #7 | #6 |
 |  10 | 11/9(월), 11/12(목) | Programming to Interfaces | #8 | #7 |
 |  11 | 11/16(월), 11/19(목) | Graphical User Interfaces and Event-Driven Programming | #9 | #8 |
 |  12 | 11/23(월), 11/26(목) | Team Project Design PresentationT | #10 | - |
 |  13 | 11/30(월), 12/3(목) | Text and File Processing | - | - |
 |  14 | 12/7(월), 12/10(목) | Team Project Demo | - | - |
-|  15 | 12/14(월) | 코딩 시험 2 | - | - |
+|  15 | 12/14(월) | (오프라인) 코딩 시험 2 | - | - |
 
 ### 평가
 
