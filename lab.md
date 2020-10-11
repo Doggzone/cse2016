@@ -4,6 +4,19 @@ layout: page
 title: 실습
 ---
 
+## Lab #5. Control Structure: COnditional Statements and Software Architecture (2020/10/12,15)
+
+### `BankAccountManager2` 애플리케이션 - 계좌 이체 기능 추가
+
+- `BankAccount` 클래스에 다음 사양의 계좌이체 기능 추가
+
+![Lab5](https://i.imgur.com/rhwNn3G.png)
+
+- `BankReader` 클래스에 계좌이체 서비스 입력 메뉴 추가
+  - `> 금액` - send
+  - `< 금액` - receive
+
+
 ## Lab #4. Component Structure: Method and Class Building (2020/10/5,8)
 
 ### 1. MathOperations 클래스에 역수 계산 메소드 장착하기
