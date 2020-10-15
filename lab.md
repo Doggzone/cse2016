@@ -4,6 +4,8 @@ layout: page
 title: 실습
 ---
 
+
+
 ## Lab #5. Control Structure: COnditional Statements and Software Architecture (2020/10/12,15)
 
 ### `BankAccountManager2` 애플리케이션 - 계좌 이체 기능 추가
@@ -15,6 +17,263 @@ title: 실습
 - `BankReader` 클래스에 계좌이체 서비스 입력 메뉴 추가
   - `> 금액` - send
   - `< 금액` - receive
+
+```
+/* 시동 클래스 
+ * 입력 포맷 
+ *   P     - 주계좌
+ *   S     - 보조계
+ *   D 금액 - 입금 
+ *   W 금액 - 출금 
+ *   Q     - 종료 
+ * 출력 
+ *   거래 결과 */
+public class AccountManager2 {
+
+	public static void main(String[] args) {
+		BankReader reader = new BankReader();
+		BankAccount primary_account = new BankAccount(0);
+		BankAccount secondary_account = new BankAccount(0);
+		BankWriter primary_writer = new BankWriter("자유은행 계좌#1", account);
+		BankWriter secondary_writer = new BankWriter("자유은행 계좌#2", account);
+		AccountController2 controller = new AccountController2(reader, primary_writer, secondary_account, 
+						                                               primary_writer, secondary_account);
+		controller.processTransactions();
+	}
+}
+```
+
+```
+public class AccountController2 {
+	
+	private BankReader reader; // input-view
+	private BankWriter primary_writer; // output-view
+	private BankWriter secondary_writer;
+	private BankAccount primary_account; // model
+	private BankAccount secondary_account;
+	private BankAccount account; // remembers active account
+	private BankWriter writer; // remembers active writer
+	
+	/* AccountController 객체 초기 
+	 * @param r - input-view 객체 
+	 * @param w - output-view 객체
+	 * @param a - model 객체 */
+	public AccountController2(BankReader r, BankWriter w1, BankAccount a1,
+			                                BankWriter w2, BankAccount a2) {
+		reader = r;
+		primary_writer = w1;
+		secondary_writer = w2;
+		primary_account = a1;
+		secondary_account = a2;
+		// 기본은 주계좌
+		account = primary_account;
+		writer = primary_writer;
+	}
+	
+	/* resetAccount - 계좌 변경 
+	 * @param new_account - 변경할 계좌 
+	 * @param new_writer - 변경할 출력기 */
+	private void resetAccount(BankAccount new_account BankWriter new_writer) {
+		writer.showTransactions("비활성");
+		account = new_account;
+		writer = new_writer;
+		writer.showTransactions("활성");
+	}
+	
+	/* processTransactions - Q 요청을 할 때까지 고객의 요청을 처리 */
+	public void processTransactions() {
+		char command = reader.readCommand("계좌#1 P, 계좌#2 S, 입금 D금액, 출금 W금액, 종료 Q);");
+		if (command == 'Q') {
+			writer.showTransaction("서비스를 마칩니다.");
+			return;
+		}
+		else if (command == 'D') {
+			int amount = reader.readAmount();
+			if (account.deposit(amount))
+				writer.showTransaction(amount, "입금");
+			else
+				writer.showTransaction("입금 실패");
+		}
+		else if (command == 'W') {
+			int amount = reader.readAmount();
+			if (account.withdraw(amount))
+				writer.showTransaction(amount, "출금");
+			else
+				writer.showTransaction("출금 실패");
+		}
+		else if (command == 'P') 
+			resetAccount(primary_account, primary_writer);
+		else if (command == 'S')
+			resetAccount(secondary_account, secondary_writer);
+		else
+			writer.showTransaction("요청 오류");
+		this.processTransactions();
+	}
+}
+```
+
+```
+import javax.swing.*;
+
+public class BankAccount {
+	
+	private int balance; // invariant: balance >= 0
+	
+	/* BankAccount - 계좌 개설
+	 * @param initial_amount - 초기 입금 금액 (0 이상 양수) */
+	public BankAccount(int initial_amount) {
+		if (initial_amount >= 0)
+			balance = initial_amount;
+		else
+			balance = 0;
+	}
+	
+	/* deposit - 입금 
+	 * @param amount - 입금액 (0 이상 양수) 
+	 * @return 입금 성공하면 true, 실패하면 false */
+	public boolean deposit(int amount) {
+		boolean result = false;
+		if (amount >= 0) {
+			balance = balance + amount;
+			result = true;
+		}
+		else 
+			JOptionPane.showMessageDialog(null, "입금액에 문제가 있어서 입금이 취소되었습니다.");
+		return result;
+	}
+	
+	/* withdraw - 출금 (잔고가 있는 경우 한)
+	 * @param amount - 출금액 (0 이상 양수) 
+	 * @return 출금 성공하면 true, 실패하면 false */
+	public boolean withdraw(int amount) {
+		boolean result = false;
+		if (amount < 0) {
+			JOptionPane.showMessageDialog(null, "출금액에 문제가 있어서 입금이 취소되었습니다.");
+		}
+		else if (amount > balance) 
+			JOptionPane.showMessageDialog(null, "출금액이 잔고액보다 많아서 입금이 취소되었습니다.");
+		else {
+			balance = balance - amount;
+			result = true;
+		}
+		return result;
+	}
+	
+	/* getBalance - 잔액 확인 
+	 * @return 잔액 */
+	public int getBalance() {
+		return balance;
+	}
+	
+	public static void main(String[] args) {
+		BankAccount tester = new BankAccount(0);
+		System.out.println("잔액 = " + tester.getBalance());
+		int five = 50000;
+		int three = 30000;
+		if (tester.deposit(five))
+			System.out.println(five + "원 입금 성공 : 잔액 = " + tester.getBalance());
+		else
+			System.out.println(five + "원 입금 실패 : 잔액 = " + tester.getBalance());
+		if (tester.withdraw(three))
+			System.out.println(three + "원 출금 성공 : 잔액 = " + tester.getBalance());
+		else 
+			System.out.println(three + "원 출금 실패 : 잔액 = " + tester.getBalance());
+		if (tester.withdraw(three))
+			System.out.println(three + "원 출금 성공 : 잔액 = " + tester.getBalance());
+		else 
+			System.out.println(three + "원 출금 실패 : 잔액 = " + tester.getBalance());
+	}
+}
+```
+
+```
+import javax.swing.*;
+
+public class BankReader {
+	
+	private String input_line;
+	
+	/* BankReader - 입력기 초기화 */
+	public BankReader() {
+		input_line = "";
+	}
+	
+	/* readCommand - 요청 서비스 파악 
+	 * @param message - 안내 메시지
+	 * @return 요청 문자열의 첫 문자 */
+	public char readCommand(String message) {
+		input_line = JOptionPane.showInputDialog(message).trim().toUpperCase();
+		return input_line.charAt(0);
+	}
+	
+	/* readAmount - 요청 액수 파악 
+	 * @return 금액, 문제가 발생하면 알리고 0을 리턴 */
+	public int readAmount() {
+		int amount = 0;
+		String s = input_line.substring(1, input_line.length());
+		s = s.trim();
+		if (s.length() > 0)
+			amount = Integer.parseInt(s);
+		else
+			JOptionPane.showMessageDialog(null, "금액 입력 오류");
+		return amount;
+	}
+}
+```
+
+```
+import java.awt.*;
+import javax.swing.*;
+
+public class BankWriter extends JPanel {
+	private int WIDTH = 300;
+	private int HEIGHT = 200;
+	private BankAccount bank;
+	private String last_transaction = "";
+	
+	/* BankWriter - 출력기 초기화 
+	 * @param title - 창의 제목 
+	 * @param b - BankAccount 객체 */
+	public BankWriter(String title, BankAccount b) {
+		bank = b;
+		JFrame f = new JFrame();
+		f.getContentPane().add(this);
+		f.setTitle(title);
+		f.setSize(WIDTH, HEIGHT);
+		f.setVisible(true);
+		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);		
+	}
+	
+	public void paintComponent(Graphics g) {
+		g.setColor(Color.white);
+		g.fillRect(0, 0, WIDTH, HEIGHT+22);
+		g.setColor(Color.black);
+		int text_margin = 50;
+		int text_baseline = 50;
+		g.drawString(last_transaction, text_margin, text_baseline);
+		g.drawString("잔액 = " + bank.getBalance() + "원", text_margin, text_baseline + 20);
+	}
+	
+	/* showTransaction - 거래 결과 표시 
+	 * @param message - 거래 메시지
+	 * @param amount - 거래 금액 */
+	public void showTransaction(int amount, String message) {
+		last_transaction = amount + "원 " + message;
+		this.repaint();
+	}
+	
+	/* showTransaction - 거래 결과 표시 
+	 * @param message - 거래 메시지 */
+	public void showTransaction(String message) {
+		last_transaction = message;
+		this.repaint();
+	}
+}
+```
+
+
+
+
 
 
 ## Lab #4. Component Structure: Method and Class Building (2020/10/5,8)
