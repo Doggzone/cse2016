@@ -10,7 +10,7 @@ title: 실습
 
 ### `BankAccountManager2` 애플리케이션 - 계좌 이체 기능 추가
 
-- `BankAccount` 클래스에 다음 사양의 계좌이체 기능 추가
+- 다음 사양의 계좌이체 기능 추가
 
 ![Lab5](https://i.imgur.com/rhwNn3G.png)
 
