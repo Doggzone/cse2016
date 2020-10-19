@@ -31,7 +31,7 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 |  4  | 9/24(목), 9/28(월) | [Input, Output, and State](https://drive.google.com/file/d/1LADyBln2r9QkFZIYPAJ_v32sqzCxA9Kq/view?usp=sharing) | #3 | #2 |
 |  5  | 10/5(월), 10/8(목) | [Component Structure: Method and Class Building](https://drive.google.com/file/d/1UiJqD4HANsGrWdxZe5La4HEmplYhycko/view?usp=sharing) | #4 | #3 |
 |  6  | 10/12(월), 10/15(목) | [Control Structure: Conditional Statements and Software Architecture](https://drive.google.com/file/d/1ryHttYDsxQBBBUq_0uc0aZ4nTdirFGnv/view?usp=sharing) | #5 | #4 |
-|  7  | 10/19(월), 10/22(목) | Patterns of Repetition: Iteration and Recursion | #6 | #5 |
+|  7  | 10/19(월), 10/22(목) | [Patterns of Repetition](https://drive.google.com/file/d/1He1ZLazSArL4y0n1BE9wuwOyipnmCGTR/view?usp=sharing) | #6 | #5 |
 |  8  | 10/26(월) | (오프라인) 코딩 시험 1 | - | - |
 |  9  | 11/2(월), 11/5(목) | Data Structure: Arrays | #7 | #6 |
 |  10 | 11/9(월), 11/12(목) | Programming to Interfaces | #8 | #7 |
