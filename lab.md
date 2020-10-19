@@ -4,9 +4,30 @@ layout: page
 title: 실습
 ---
 
+## Lab #6. Patterns of Repetition (2020/10/22)
+
+### Bouncing Ball Animation
+
+#### 1. 파란 공을 하나 추가
+
+- 두 공은 다른 장소에서 다른 방향으로 출발한다.
+- 두 공이 움직이는 속도는 같다.
+- 공이 충돌해도 그대로 통과한다.
+
+#### 2. 충돌시 진로 수정
+
+- 두 공이 충돌하면, 둘 다 진행 방향을 역방향으로 바꾸도록 한다.
+
+#### 3. 장애물 설치
+
+- 중앙에 다음과 같은 모양의 적당한 길이의 장애물을 설치한다.
+
+![Bar](https://i.imgur.com/Cf8GiTq.png)
+
+- 공이 이 장애물 위면 또는 아래면을 만나면 y축 진행 방향을 바꾸도록 한다.
 
 
-## Lab #5. Control Structure: COnditional Statements and Software Architecture (2020/10/12,15)
+## Lab #5. Control Structure: Conditional Statements and Software Architecture (2020/10/12,15)
 
 ### `BankAccountManager2` 애플리케이션 - 계좌 이체 기능 추가
 
