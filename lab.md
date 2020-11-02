@@ -4,6 +4,23 @@ layout: page
 title: 실습
 ---
 
+## Lab #7. Arrays (2020/11,2/5)
+
+### 1. 공부한 CardDeck, Card 클래스를 활용하여 다음 사양의
+Dealer, Player 클래스를 만들어보자.
+
+#### class Dealer - 카드 딜러
+
+- 메소드: dealTo(Player p) - p에게 카드를 한장 원하는 만큼 한장씩 준다.
+
+#### class Player - 손님
+- 메소드: boolean wantsACard() - 카드는 더 받고 싶은지 응답한다.
+- 메소드: receiveCard(Card c) - 카드 c를 받아 손에 넣는다.
+- 메소드: Card[] showCards() - 갖고 있는 카드를 모두 보여준다.
+
+### 2. Slide Puzzle Game
+
+
 ## Lab #6. Patterns of Repetition (2020/10/22)
 
 ### Bouncing Ball Animation
