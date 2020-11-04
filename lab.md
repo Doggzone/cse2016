@@ -6,19 +6,56 @@ title: 실습
 
 ## Lab #7. Arrays (2020/11,2/5)
 
-### 1. 공부한 CardDeck, Card 클래스를 활용하여 다음 사양의
-Dealer, Player 클래스를 만들어보자.
+### 1. 공부한 CardDeck, Card 클래스를 활용하여 
+다음에 주석으로 기술한 명세를 만족하는 Hand 클래스를 완성하자. 
 
-#### class Dealer - 카드 딜러
+```
+public class Hand {
+	// 카드 놀이 하는 참여자의 손에 들고 있는 카드의 모델
 
-- 메소드: dealTo(Player p) - p에게 카드를 한장 원하는 만큼 한장씩 준다.
+	private Card[] hand; // 손에 들고 있는 카드
+	private int number_of_cards; // 손에 들고 있는 카드의 장수
 
-#### class Player - 손님
-- 메소드: boolean wantsACard() - 카드는 더 받고 싶은지 응답한다.
-- 메소드: receiveCard(Card c) - 카드 c를 받아 손에 넣는다.
-- 메소드: Card[] showCards() - 갖고 있는 카드를 모두 보여준다.
+	/** Constructor Hand - how_many 카드를 수용가능한 Card 배열 객체를 만들어 hand 초기화 
+	 * @param how_many - 들고 있을 수 있는 카드의 최대 장수 */
+	public Hand(int how_many) {
+		hand = new Card[how_many];
+	}
+	
+	/** showHand - 들고 있는 카드를 모두 실행창에 프린트한다. 
+	 *             카드가 없으면 카드가 없다고 프린트한다. */ 
+	public void showHand() {
 
-### 2. Slide Puzzle Game
+
+	}
+	
+	/** receiveCard - 카드를 한장 받는다. 한도(배열 hand의 크기)를 초과하면 받을 수 없다.
+	 * @param c - 카드
+	 * @return 성공적으로 받았으면 true, 그렇지 않으면 false */
+	public boolean receiveCard(Card c) {
+
+
+	}
+
+	/** removeCard - 들고 있는 카드 중에서 하나를 버린다. 
+	 *  게임에 따라 버릴 카드를 선택하는 기준이 다를 수 있음. 여기서는 무작위로 선택 
+	 * @return 선택한 카드, 손에 들고 있는 카드가 없으면 null */
+	public Card removeCard() {
+		if (number_of_cards > 0) {
+			int picked = (int)(Math.random() * number_of_cards);
+			Card card_to_remove = hand[picked];
+			
+
+
+		}
+		else
+			return null;
+	}
+}
+
+```
+
+### 2. Slide Puzzle Game (따라 하기)
 
 
 ## Lab #6. Patterns of Repetition (2020/10/22)
