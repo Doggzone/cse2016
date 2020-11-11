@@ -12,19 +12,19 @@ title: 실습
 실행하여 어떤 결과가 나오는지 확인하자. 
 
 ```
-	public static void main(String[] args) {
-		Database db = new Database(4);
+public static void main(String[] args) {
+	Database db = new Database(4);
 		
-		BankAccount c1 = new BankAccount(50000, new IntegerKey(55));
-		boolean register1 = db.insert(c1);
+	BankAccount c1 = new BankAccount(50000, new IntegerKey(55));
+	boolean register1 = db.insert(c1);
 		
-		IntegerKey k = new IntegerKey(1979);
-		BankAccount c2 = new BankAccount(10000, k);
-		boolean register2 = db.insert(c2);
+	IntegerKey k = new IntegerKey(1979);
+	BankAccount c2 = new BankAccount(10000, k);
+	boolean register2 = db.insert(c2);
 		
-		Record r = db.find(k);
-		System.out.println(((BankAccount)r).getBalance());
-	}
+	Record r = db.find(k);
+	System.out.println(((BankAccount)r).getBalance());
+}
 ```
 
 ### 2. Inheritance 이해하기
