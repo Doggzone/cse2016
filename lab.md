@@ -1,4 +1,4 @@
---혀
+---
 layout: page
 
 title: 실습
