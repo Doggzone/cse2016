@@ -1,10 +1,124 @@
----
+--혀
 layout: page
 
 title: 실습
 ---
 
-## Lab #7. Arrays (2020/11,2/5)
+## Lab #8-1. Programming to Interface (상) (2020/11/12)
+
+### 1. Database Application 구현 따라하기
+
+다음 메인 메소드를 `Database` 클래스에 추가하여
+실행하여 어떤 결과가 나오는지 확인하자. 
+
+```
+	public static void main(String[] args) {
+		Database db = new Database(4);
+		
+		BankAccount c1 = new BankAccount(50000, new IntegerKey(55));
+		boolean register1 = db.insert(c1);
+		
+		IntegerKey k = new IntegerKey(1979);
+		BankAccount c2 = new BankAccount(10000, k);
+		boolean register2 = db.insert(c2);
+		
+		Record r = db.find(k);
+		System.out.println(((BankAccount)r).getBalance());
+	}
+```
+
+### 2. Inheritance 이해하기
+
+```
+public class Person {
+    private String name;
+
+    public Person(String n) {
+        name = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean sameName(Person other) {
+        return getName().equals(other.getName();
+    }
+}
+```
+
+```
+public class PersonFrom extends Person {
+    private String city;
+
+    public PersonFrom(String n, String c) {
+        super(n);
+        city = c;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public boolean same(PersonFrom other) {
+        return sameName(other) && 
+               city.equals(other.getCity());
+    }
+}
+```
+
+```
+Person p = new Person(“마음”);
+Person q = new PersonFrom(“소리”,”서울”);
+```
+
+다음 각 문장을 이해하고, Java 컴파일러를 통과하는 문장을 고르고, 그 문장이 무엇을 프린트할지 예측해보자.
+
+- `System.out.println(p.getCity());`
+- `System.out.println(q.getName());`
+- `System.out.println(p.sameName(p));`
+- `System.out.println(q.sameName(p));`
+- `System.out.println(q.same(p));`
+
+### 3. 서브 타입 이해하기
+
+다음 각 문장을 이해하고, Java 컴파일러를 통과하는 문장을 고르고, 그 문장이 무엇을 프린트할지 예측해보자.
+
+- `System.out.println(p.sameName(q));`
+- `Person x = q; System.out.println(x.getName());`
+- `PersonFrom x = p; System.out.println(x.getCity());`
+- `Person x = q; System.out.println(x.getCity());`
+- `System.out.println(q.same(p));`
+
+### 4. `instanceof`
+
+1. 앞에서 구현한 StringKey와 같은 요령으로 IntegerKey를 구현하자.
+2. 다음 코드를 실행하면 어떤 결과가 실행창에 프린트될까?
+
+```
+Database db = new Database(4);
+
+BankAccount a1 = new BankAccount(50000, new IntegerKey(55));
+IntegerKey k = new StringKey(“열려라”);
+BankAccount a2 = new BankAccount(10000, k);
+boolean transaction1 = db.insert(a1);
+boolean transaction2 = db.insert(a2);
+
+Record p = db.find(k);
+BankAccount q = (BankAccount)p;
+System.out.println(q.getBalance());
+
+Key k = q.getKey();
+if (k instanceof IntegerKey)
+    System.out.println(((IntegerKey)k).getInt());
+else if (k instanceof StringKey)
+    System.out.println(((StringKey)k).getString());
+else
+    System.out.println(“모르는 Key 출현 오류”);
+```
+
+
+## Lab #7. Arrays (2020/11/2,5,9)
 
 ### 1. 공부한 CardDeck, Card 클래스를 활용하여 
 다음에 주석으로 기술한 명세를 만족하는 Hand 클래스를 완성하자. 
