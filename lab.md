@@ -4,7 +4,7 @@ layout: page
 title: 실습
 ---
 
-## Lab #8-1. Programming to Interface (상) (2020/11/12)
+## Lab #8-1. Programming to Interface (상) (2020/11/16)
 
 ### 1. Database Application 구현 따라하기
 
