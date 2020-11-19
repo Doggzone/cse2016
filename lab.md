@@ -4,6 +4,39 @@ layout: page
 title: 실습
 ---
 
+## Lab #8-2. Programming to Interface (하) (2020/11/19)
+
+### 5. `Dealer` 클래스 구현 (따라하기)
+
+##### (1) 다음 `CardPlayerBehavior`를 참고하여 아래 명세의 `Dealer` 클래스를 구현하자.
+
+```
+public interface CardPlayerBehavior {
+	
+	/** wantsACard - 카드 한 장을 받겠는지 답한다.
+	 * @return 카드를 받고 싶으면 true, 아니면 false */
+	public boolean wantsACard();
+	
+	/** receiveCard - 카드를 한장 받는다. 한도(배열 hand의 크기)를 초과하면 받을 수 없다.
+	 * @param c - 카드
+	 * @return 성공적으로 받았으면 true, 그렇지 않으면 false */
+	public boolean receiveCard(Card c);
+}
+
+```
+
+![Dealer](https://i.imgur.com/YbaR1OC.png)
+
+##### (2) 위의 명세에서 `CardPlayerBehavior`를 `CardPlayer`로 
+모두 고쳤다고 하고, `class Dealer`를 수정해보자.
+이 두 버전이 차이점을 이해하고, 장단점을 생각해보자.
+
+
+### 6. `Card Player` 구현 (따라하기)
+
+![CardPlayer](https://i.imgur.com/tT5VUkA.png)
+
+
 ## Lab #8-1. Programming to Interface (상) (2020/11/16)
 
 ### 1. Database Application 구현 따라하기
