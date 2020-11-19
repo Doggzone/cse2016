@@ -34,8 +34,8 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 |  7  | 10/19(월), 10/22(목) | [Patterns of Repetition](https://drive.google.com/file/d/1He1ZLazSArL4y0n1BE9wuwOyipnmCGTR/view?usp=sharing) | #6 | #5 |
 |  8  | 10/26(월) | (오프라인) 코딩 시험 1 | - | - |
 |  9  | 11/2(월), 11/5(목) | [Data Structure: Arrays](https://drive.google.com/file/d/1mQz7CALSPhIhjQ5d9PpSlVYMCJPpaOw3/view?usp=sharing) | #7 | #6 |
-|  10 | 11/9(월), 11/12(목) | Data Structure: Arrays | #8 | #7 |
-|  11 | 11/16(월), 11/19(목) | Programming to Interfaces([상](https://drive.google.com/file/d/1pVwDj9M8Nup8V-IPJYoJ81beE8mk7K1l/view?usp=sharing),하) | #9 | #8 |
+|  10 | 11/9(월), 11/12(목) | Data Structure: Arrays | #8 | - |
+|  11 | 11/16(월), 11/19(목) | Programming to Interfaces([상](https://drive.google.com/file/d/1pVwDj9M8Nup8V-IPJYoJ81beE8mk7K1l/view?usp=sharing),[하](https://drive.google.com/file/d/13TMg-c3EJaxMvNODu0Ki8awmtajBKxik/view?usp=sharing)) | #9 | - |
 |  12 | 11/23(월), 11/26(목) | Graphical User Interfaces and Event-Driven Programming | #10 | - |
 |  13 | 11/30(월), 12/3(목) | Text and File Processing | - | - |
 |  14 | 12/7(월), 12/10(목) | Team Project Demo | - | - |
@@ -49,7 +49,7 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 | 실습 | 10% | 1% x 10 |
 | 숙제 | 16% | 2% x 8 |
 | 코딩시험 | 54% | 27% x 2 |
-| 팀프로젝트 | 10% | 제안 3% + 디자인 3% + 시연 4% |
+| 팀프로젝트 | 10% | 팀 = 제안(문서) 3% + 디자인 3% + 시연 4% |
 | 합계 | 100% |  |
 
 ### 수업 윤리
