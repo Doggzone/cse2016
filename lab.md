@@ -4,6 +4,14 @@ layout: page
 title: 실습
 ---
 
+## Lab #9-1. GUI and Event-Driven Programming (상) (2020/11/23)
+
+#### 1. 라벨, 버튼 프레임을 윈도우에 끼우기
+
+#### 2. 카운터 만들기 (최종 버전만 제출)
+
+#### 3. 크기, 색깔 변하는 공 (제출하지 않아도 됨)
+
 ## Lab #8-2. Programming to Interface (하) (2020/11/19)
 
 ### 5. `Dealer` 클래스 구현 (따라하기)
