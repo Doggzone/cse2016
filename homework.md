@@ -7,8 +7,8 @@ title: 숙제
 ## Final Team Project Options (제출 마감: 12월 10일 15:00) 
 
 - 팀 구성 : Option #1,2: 2인 구성, Option #3: 2~3인 구성
-- Final Project Option #1 : 퍼즐게임 스도쿠 - 요구사항 제공
-- Final Project Option #2 : 카드게임 블랙잭 - 요구사항 제공
+- Final Project Option #1 : 퍼즐게임 스도쿠 - 요구사항 ([참고](https://drive.google.com/file/d/1jNQyRSuElWsnIV6ZTa8bqFelA1Sj90OA/view?usp=sharing))
+- Final Project Option #2 : 카드게임 블랙잭 - 요구사항 ([참고](https://drive.google.com/file/d/1xKbpz1s5VCYCL5qBy3aDgdGw4x2zZIT3/view?usp=sharing))
 - Final Project Option #3 : 자유선택 보드게임/카드게임
 
 #### 제출물
