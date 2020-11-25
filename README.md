@@ -39,7 +39,7 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 |  12 | 11/23(월), 11/26(목) | Graphical User Interfaces and Event-Driven Programming ([상](https://drive.google.com/file/d/18QOj0QD6zatvHxVEhpqm4ou-OVcMdhT8/view?usp=sharing), 하)| #10 | - |
 |  13 | 11/30(월), 12/3(목) | Text and File Processing | - | - |
 |  14 | 12/7(월), 12/10(목) | Team Project Demo | - | - |
-|  15 | 12/14(월) | (오프라인) 코딩 시험 2 | - | - |
+|  15 | 12/17(목) | (오프라인) 코딩 시험 2 | - | - |
 
 ### 평가
 
