@@ -3,6 +3,12 @@ layout: page
 
 title: 실습
 ---
+## Lab #9-2. GUI and Event-Driven Programming (하) (2020/11/26)
+
+#### 4. 퍼즐 게임 GUI 버전 `slidepuzzle` - 코팅 따라하기 (제출)
+#### 5. 스크롤 리스트 `scrollinglist` - 코드 읽기 (제출하지 않음)
+#### 6. 텍스트 필드 `tempconv`- 코드 읽기 (제출하지 않음)
+#### 7. 텍스트 편집기 `texteditor`- 코드 읽기 (제출하지 않음)
 
 ## Lab #9-1. GUI and Event-Driven Programming (상) (2020/11/23)
 
