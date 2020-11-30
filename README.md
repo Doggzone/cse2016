@@ -37,8 +37,8 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 |  10 | 11/9(월), 11/12(목) | Data Structure: Arrays | #8 | - |
 |  11 | 11/16(월), 11/19(목) | Programming to Interfaces([상](https://drive.google.com/file/d/1pVwDj9M8Nup8V-IPJYoJ81beE8mk7K1l/view?usp=sharing),[하](https://drive.google.com/file/d/13TMg-c3EJaxMvNODu0Ki8awmtajBKxik/view?usp=sharing)) | #9 | - |
 |  12 | 11/23(월), 11/26(목) | Graphical User Interfaces and Event-Driven Programming ([상](https://drive.google.com/file/d/18QOj0QD6zatvHxVEhpqm4ou-OVcMdhT8/view?usp=sharing), [하](https://drive.google.com/file/d/19dxi5ClHH2-24AwXkAyp9k0i8XVS_Iy1/view?usp=sharing))| #10 | - |
-|  13 | 11/30(월), 12/3(목) | Text and File Processing | - | - |
-|  14 | 12/7(월), 12/10(목) | Team Project Demo | - | - |
+|  13 | 11/30(월) | [Text and File Processing](https://drive.google.com/file/d/1JQuwchBQT3Ms12f-Kv-G0h0G4w1o8JXk/view?usp=sharing) | - | - |
+|  14 | 12/3(목), 12/7(월), 12/10(목), 12/14(월) | Team Project Demo | - | - |
 |  15 | 12/17(목) | (오프라인) 코딩 시험 2 | - | - |
 
 ### 평가
