@@ -12,6 +12,16 @@ MVC 아키텍처 기반 프로그램 설계의 이해 및 숙달
 ### 교재
 - David Schmidt, [Programming Principles in Java: Architectures and Interfaces](http://people.cs.ksu.edu/~schmidt/CIS200/home.html)
 
+### 방학중 일독 권장 도서
+- 이광근, [컴퓨터과학이 여는 세계](https://cse.snu.ac.kr/node/20089), 2015. 
+  + [학술정보관 9권](https://information.hanyang.ac.kr/#/search/detail/1636384), 소프트웨어융합대학 행정실 5권
+- 월터 아이작슨, [이노베이터: 창의적인 삶으로 나아간 천재들의 비밀](https://books.google.co.kr/books?id=B5qFCwAAQBAJ&lpg=PT324&ots=lRwLGaoTup&dq=%EC%9D%B4%EB%85%B8%EB%B2%A0%EC%9D%B4%ED%84%B0%3A%20%EC%B0%BD%EC%9D%98%EC%A0%81%EC%9D%B8%20%EC%82%B6%EC%9C%BC%EB%A1%9C%20%EB%82%98%EC%95%84%EA%B0%84%20%EC%B2%9C%EC%9E%AC%EB%93%A4%EC%9D%98%20%EB%B9%84%EB%B0%80&hl=ko&pg=PT313#v=onepage&q=%EC%9D%B4%EB%85%B8%EB%B2%A0%EC%9D%B4%ED%84%B0:%20%EC%B0%BD%EC%9D%98%EC%A0%81%EC%9D%B8%20%EC%82%B6%EC%9C%BC%EB%A1%9C%20%EB%82%98%EC%95%84%EA%B0%84%20%EC%B2%9C%EC%9E%AC%EB%93%A4%EC%9D%98%20%EB%B9%84%EB%B0%80&f=false), 2014. 
+  + 번역서: [학술정보관 1권](https://information.hanyang.ac.kr/#/search/detail/1666327), 소프트웨어융합대학 행정실 5권 보유
+  + 원서: [학술정보관 2권](https://information.hanyang.ac.kr/#/search/detail/1652064) 보유 
+  + 강의: [소프트웨어 혁명 : 역사와 전망 (2015)](https://www.youtube.com/playlist?list=PL0UNsS2daHTziQ6QcREkcMg773C4dhWAK)
+
+
+
 ### 언어 및 IDE
 - [JDK 15 Documentation](https://docs.oracle.com/en/java/javase/15/index.html)
 - [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
