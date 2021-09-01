@@ -13,7 +13,7 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 - 도경구, 부품 구조 설계 원리를 중심으로 배우는 프로그래밍의 정석, 미출판 강의 노트
 
 ### 언어 및 IDE
-- [JDK 15 Documentation](https://docs.oracle.com/en/java/javase/15/index.html)
+- [JDK 15 API Documentation](https://docs.oracle.com/en/java/javase/15/docs/api/index.html)
 - [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
 
 ### 수업 시간 및 장소
