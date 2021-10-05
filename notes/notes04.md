@@ -10,9 +10,9 @@
 ```
 public class ClassName {
 
-	public ClassName(<type> par_1, ..., <type> par_n) {
-		// 몸체 코드 블록
-	}
+    public ClassName(<type> par_1, ..., <type> par_n) {
+        // 몸체 코드 블록
+    }
 }
 ```
 여기서 괄호 안에 나열한 `<type> par_1`, ..., `<type> par_n` 은 <b>파라미터(parameter)</b> 변수라고 하는데, (일반 메소드 파라미터와 마찬가지로) 변수 선언 형식과 동일하며, 0개 이상 원하는 만큼 나열할 수 있다.
@@ -24,7 +24,7 @@ new ClassName(arg_1, ..., arg_n)
 ```
 public class ClassName {
 
-	public ClassName() { }
+    public ClassName() { }
 }
 ```
 따라서 지금까지의 객체 생성은 모두 다음과 같은 형식이었었다.
@@ -53,18 +53,18 @@ import javax.swing.*;
 
 public class Canvas {
 	
-	public Canvas() {
-		JFrame frame = new JFrame();
-		frame.setTitle("Canvas");
-		frame.setSize(300, 200);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public Canvas() {
+        JFrame frame = new JFrame();
+        frame.setTitle("Canvas");
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 	
-	// test code
-	public static void main(String[] args) {
-		new Canvas();
-	}
+    // test code
+    public static void main(String[] args) {
+        new Canvas();
+    }
 
 }
 ```
@@ -101,24 +101,24 @@ import java.awt.*;
 
 public class Canvas extends JPanel {
 	
-	public Canvas() {
-		JFrame frame = new JFrame();
-		frame.setTitle("Canvas");
-		frame.setSize(300, 200);
-		frame.getContentPane().add(this);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public Canvas() {
+        JFrame frame = new JFrame();
+        frame.setTitle("Canvas");
+        frame.setSize(300, 200);
+        frame.getContentPane().add(this);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 	
-	public void paintComponent(Graphics g) {
-		g.setColor(Color.red);
-		g.drawString("Java!", 100, 60);
-	}
+    public void paintComponent(Graphics g) {
+        g.setColor(Color.red);
+        g.drawString("Java!", 100, 60);
+    }
 	
-	// test code
-	public static void main(String[] args) {
-		new Canvas();
-	}
+    // test code
+    public static void main(String[] args) {
+        new Canvas();
+    }
 
 }
 ```
@@ -156,27 +156,27 @@ import java.awt.*;
 
 public class Canvas extends JPanel {
 	
-	public Canvas() {
-		JFrame frame = new JFrame();
-		frame.setTitle("Canvas");
-		frame.setSize(300, 200);
-		frame.getContentPane().add(this);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public Canvas() {
+        JFrame frame = new JFrame();
+        frame.setTitle("Canvas");
+        frame.setSize(300, 200);
+        frame.getContentPane().add(this);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 	
-	public void paintComponent(Graphics g) {
-		g.setColor(Color.white);
-		g.fillRect(0, 0, 300, 200);
-		g.setColor(Color.red);
-		g.drawRect(100, 60, 90, 60);
-		g.fillOval(100, 60, 50, 50);
-	}
+    public void paintComponent(Graphics g) {
+        g.setColor(Color.white);
+        g.fillRect(0, 0, 300, 200);
+        g.setColor(Color.red);
+        g.drawRect(100, 60, 90, 60);
+        g.fillOval(100, 60, 50, 50);
+    }
 	
-	// test code
-	public static void main(String[] args) {
-		new Canvas();
-	}
+    // test code
+    public static void main(String[] args) {
+        new Canvas();
+    }
 
 }
 ```
@@ -223,46 +223,46 @@ import java.time.*;
 
 public class ClockWriter extends JPanel {
 	
-	public ClockWriter() {
-		int width = 200;
-		// 프레임 생성 
-		JFrame frame = new JFrame();
-		// 자신(패널)을 프레임에 끼우기 
-		frame.getContentPane().add(this);
-		// 프레임 만들어 보여주기 
-		frame.setTitle("Clock");
-		frame.setSize(width,width);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public ClockWriter() {
+        int width = 200;
+        // 프레임 생성 
+        JFrame frame = new JFrame();
+        // 자신(패널)을 프레임에 끼우기 
+        frame.getContentPane().add(this);
+        // 프레임 만들어 보여주기 
+        frame.setTitle("Clock");
+        frame.setSize(width,width);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 	
-	public void paintComponent(Graphics g) {
-		int width = 200;
-		// 바탕은 흰색으로 
-		g.setColor(Color.white);
-		g.fillRect(0, 0, width, width);
-		// 현재 시간 + 시침, 분침 각도 계산
-		LocalTime now = LocalTime.now();
-		int minutes_angle = 90 - now.getMinute() * 6;
-		int hours_angle = 90 - now.getHour() * 30;
-		// 시계 크기 설정
-		int x = 50;
-		int y = 50;
-		int diameter = 100;
-		// 시계 판 그리기
-		g.setColor(Color.black);
-		g.drawOval(x, y, diameter,diameter);
-		// 분침 그리기
-		g.setColor(Color.red);
-		g.fillArc(x+5, x+5, diameter-10, diameter-10, minutes_angle, 5);
-		// 시침 그리기 
-		g.setColor(Color.blue);
-		g.fillArc(x+25, x+25, diameter-50, diameter-50, hours_angle, -8);
-	}
+    public void paintComponent(Graphics g) {
+        int width = 200;
+        // 바탕은 흰색으로 
+        g.setColor(Color.white);
+        g.fillRect(0, 0, width, width);
+        // 현재 시간 + 시침, 분침 각도 계산
+        LocalTime now = LocalTime.now();
+        int minutes_angle = 90 - now.getMinute() * 6;
+        int hours_angle = 90 - now.getHour() * 30;
+        // 시계 크기 설정
+        int x = 50;
+        int y = 50;
+        int diameter = 100;
+        // 시계 판 그리기
+        g.setColor(Color.black);
+        g.drawOval(x, y, diameter,diameter);
+        // 분침 그리기
+        g.setColor(Color.red);
+        g.fillArc(x+5, x+5, diameter-10, diameter-10, minutes_angle, 5);
+        // 시침 그리기 
+        g.setColor(Color.blue);
+        g.fillArc(x+25, x+25, diameter-50, diameter-50, hours_angle, -8);
+    }
 
-	public static void main(String[] args) {
-		new ClockWriter();
-	}
+    public static void main(String[] args) {
+        new ClockWriter();
+    }
 }
 ```
 
@@ -278,49 +278,48 @@ import java.time.*;
 
 public class ClockWriter extends JPanel {
 	
-	private int width;
+    private int width;
 	
-	public ClockWriter(int w) {
-		// 프레임 크기 기준값 설정
-		width = w;
-		// 프레임 생성 
-		JFrame frame = new JFrame();
-		// 자신(패널)을 프레임에 끼우기 
-		frame.getContentPane().add(this);
-		// 프레임 만들어 보여주기 
-		frame.setTitle("Clock");
-		frame.setSize(width,width);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public ClockWriter(int w) {
+        // 프레임 크기 기준값 설정
+        width = w;
+        // 프레임 생성 
+        JFrame frame = new JFrame();
+        // 자신(패널)을 프레임에 끼우기 
+        frame.getContentPane().add(this);
+        // 프레임 만들어 보여주기 
+        frame.setTitle("Clock");
+        frame.setSize(width,width);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 	
-	public void paintComponent(Graphics g) {
-		
-		// 바탕은 흰색으로 
-		g.setColor(Color.white);
-		g.fillRect(0, 0, width, width);
-		// 현재 시간 + 시침, 분침 각도 계산
-		LocalTime now = LocalTime.now();
-		int minutes_angle = 90 - now.getMinute() * 6;
-		int hours_angle = 90 - now.getHour() * 30;
-		// 시계 크기 설정
-		int x = width / 4;
-		int y = width / 4;
-		int diameter = width / 2;
-		// 시계 판 그리기
-		g.setColor(Color.black);
-		g.drawOval(x, y, diameter,diameter);
-		// 분침 그리기
-		g.setColor(Color.red);
-		g.fillArc(x+5, x+5, diameter-10, diameter-10, minutes_angle, 5);
-		// 시침 그리기 
-		g.setColor(Color.blue);
-		g.fillArc(x+25, x+25, diameter-50, diameter-50, hours_angle, -8);
-	}
+    public void paintComponent(Graphics g) {
+        // 바탕은 흰색으로 
+        g.setColor(Color.white);
+        g.fillRect(0, 0, width, width);
+        // 현재 시간 + 시침, 분침 각도 계산
+        LocalTime now = LocalTime.now();
+        int minutes_angle = 90 - now.getMinute() * 6;
+        int hours_angle = 90 - now.getHour() * 30;
+        // 시계 크기 설정
+        int x = width / 4;
+        int y = width / 4;
+        int diameter = width / 2;
+        // 시계 판 그리기
+        g.setColor(Color.black);
+        g.drawOval(x, y, diameter,diameter);
+        // 분침 그리기
+        g.setColor(Color.red);
+        g.fillArc(x+5, x+5, diameter-10, diameter-10, minutes_angle, 5);
+        // 시침 그리기 
+        g.setColor(Color.blue);
+        g.fillArc(x+25, x+25, diameter-50, diameter-50, hours_angle, -8);
+    }
 
-	public static void main(String[] args) {
-		new ClockWriter(500);
-	}
+    public static void main(String[] args) {
+        new ClockWriter(500);
+    }
 }
 ```
 
@@ -337,49 +336,48 @@ import java.time.*;
 
 public class ClockWriter extends JPanel {
 	
-	private final int WIDTH;
+    private final int WIDTH;
 	
-	public ClockWriter(int w) {
-		// 프레임 크기 기준값 설정
-		WIDTH = w;
-		// 프레임 생성 
-		JFrame frame = new JFrame();
-		// 자신(패널)을 프레임에 끼우기 
-		frame.getContentPane().add(this);
-		// 프레임 만들어 보여주기 
-		frame.setTitle("Clock");
-		frame.setSize(WIDTH, WIDTH);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public ClockWriter(int w) {
+        // 프레임 크기 기준값 설정
+        WIDTH = w;
+        // 프레임 생성 
+        JFrame frame = new JFrame();
+        // 자신(패널)을 프레임에 끼우기 
+        frame.getContentPane().add(this);
+        // 프레임 만들어 보여주기 
+        frame.setTitle("Clock");
+        frame.setSize(WIDTH, WIDTH);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 	
-	public void paintComponent(Graphics g) {
-		
-		// 바탕은 흰색으로 
-		g.setColor(Color.white);
-		g.fillRect(0, 0, WIDTH, WIDTH);
-		// 현재 시간 + 시침, 분침 각도 계산
-		LocalTime now = LocalTime.now();
-		int minutes_angle = 90 - now.getMinute() * 6;
-		int hours_angle = 90 - now.getHour() * 30;
-		// 시계 크기 설정
-		int x = WIDTH / 4;
-		int y = WIDTH / 4;
-		int diameter = WIDTH / 2;
-		// 시계 판 그리기
-		g.setColor(Color.black);
-		g.drawOval(x, y, diameter,diameter);
-		// 분침 그리기
-		g.setColor(Color.red);
-		g.fillArc(x+5, x+5, diameter-10, diameter-10, minutes_angle, 5);
-		// 시침 그리기 
-		g.setColor(Color.blue);
-		g.fillArc(x+25, x+25, diameter-50, diameter-50, hours_angle, -8);
-	}
+    public void paintComponent(Graphics g) {
+        // 바탕은 흰색으로 
+        g.setColor(Color.white);
+        g.fillRect(0, 0, WIDTH, WIDTH);
+        // 현재 시간 + 시침, 분침 각도 계산
+        LocalTime now = LocalTime.now();
+        int minutes_angle = 90 - now.getMinute() * 6;
+        int hours_angle = 90 - now.getHour() * 30;
+        // 시계 크기 설정
+        int x = WIDTH / 4;
+        int y = WIDTH / 4;
+        int diameter = WIDTH / 2;
+        // 시계 판 그리기
+        g.setColor(Color.black);
+        g.drawOval(x, y, diameter,diameter);
+        // 분침 그리기
+        g.setColor(Color.red);
+        g.fillArc(x+5, x+5, diameter-10, diameter-10, minutes_angle, 5);
+        // 시침 그리기 
+        g.setColor(Color.blue);
+        g.fillArc(x+25, x+25, diameter-50, diameter-50, hours_angle, -8);
+    }
 
-	public static void main(String[] args) {
-		new ClockWriter(400);
-	}
+    public static void main(String[] args) {
+        new ClockWriter(400);
+    }
 }
 ```
 
