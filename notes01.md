@@ -1,5 +1,5 @@
 ```
-(c)도경구 version 0.91 (2022/09/04)
+(c)도경구 version 0.92 (2022/09/04)
 ```
 
 ## 1. 첫 자바 애플리케이션 만들기
@@ -118,13 +118,11 @@
 - Eclipse를 연다.
 - 먼저 프로그램을 만들어 저장할 장소를 마련해야 한다.
 - 메뉴에서 `Java Project` 클릭하여 프로젝트 만들기
-	- 프로젝트 이름은 `Project name` 칸에 `helloworld`(모두 소문자)로 적고 `Finish` 클릭
+	- 프로젝트 이름은 `Project name` 칸에 `hello`(모두 소문자)로 적고 `Finish` 클릭
 	- 다음 창에서 모듈은 (당분간) 만들지 않을 것이므로 `Don't Create` 클릭
 	- `hello` 이름의 폴더가 만들어짐. 앞으로 작성하는 프로그램은 이 폴더에 저장됨
 	- `hello` 폴더 안에 `bin`과 `src` 폴더가 생성됨
 	- `src` 폴더에는 작성하는 소스 코드가 보관되고, `bin` 폴더에는 컴파일된 바이트 코드가 보관됨
-
-<img src="https://i.imgur.com/jsVcKuF.png" width="200">
 
 - 메뉴에서 `Class` 클릭하여 클래스 만들기
 	- `Package` 이름은 (당분간) 빈칸으로 둠
@@ -142,7 +140,7 @@
 - 라인 2에서 `public class`는 공개 클래스임을 나타내는 키워드이고,
 - 이어서 나오는 `HelloWorld`는 클래스의 이름을 나타낸다.
 - 라인 4-7은 `main` 메소드(method)라고 하며, 애플리케이션 실행과 동시에 저절로 바로 실행되므로 시동을 거는 역할을 한다고 볼 수 있다.
-- `main` 메소드 앞에 `static` 이라는 키워드는 이 메소드가 클래스소속임을 나타낸다. (객체를 만들지 않고 호출이 가능함)
+- `main` 메소드 앞에 `static` 이라는 키워드는 이 메소드가 클래스소속임을 나타낸다. (객체 없이 호출이 가능함)
 - 메인 메소드의 몸체를 이루는 중괄호 사이에 코드를 작성한다.
 
 #### 구현
@@ -151,9 +149,9 @@
 
 ```
 public class HelloWorld {
-	public static void main(String[] args) {
-		System.out.println("Hello, World!");
-	}
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
 }
 ```
 
@@ -172,7 +170,7 @@ public class HelloWorld {
 #### 실행
 
 - 메뉴에서 다음과 같은 모양의 `Run` 버튼을 찾아서 클릭한다. ![Run](https://i.imgur.com/BqLc6Cm.png)
-- 콘솔창에서 `Hello, World!` 확인
+- 콘솔창에서 실행 결과 `Hello, World!` 확인한다.
 
 
 #### 실행 추적을 통한 실행 의미의 이해
