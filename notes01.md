@@ -1,20 +1,20 @@
 ```
-(c)도경구 version 0.9 (2022/09/04)
+(c)도경구 version 0.91 (2022/09/04)
 ```
 
 ## 1. 첫 자바 애플리케이션 만들기
 
 ### 1-1. 컴퓨터와 프로그램의 실행
 
-#### 1-1-1. 컴퓨터 `computer`
+#### 1-1-1. 컴퓨터(computer)
 
 - 컴퓨터는 지시/명령(프로그램)에 따라 계산을 수행하는 기계(하드웨어)이다.
 - 컴퓨터의 구성 요소
-	- 프로세서 `processor`: 프로그램에 기술한대로 계산 수행
+	- 프로세서(processor): 프로그램에 기술한대로 계산 수행
 		- 메모리에서 프로그램 또는 데이터 읽어오기
 		- 더하기, 빼기 등의 연산을 수행하기
 		- 계산한 결과를 메모리에 저장하기
-	- 메모리 `Random Access Memory`, `RAM`: 계산 수행하는데 필요한 프로그램과 데이터를 계산하는 동안 보관해 두는 곳
+	- 메모리(Random Access Memory, RAM): 계산 수행하는데 필요한 프로그램과 데이터를 계산하는 동안 보관해 두는 곳
 		- 계산에 필요한 프로그램과 데이터를 모두 기록
 		- 읽고 쓰는 속도가 빠름, 고비용
 		- 계산 작업 종료와 함께 모두 버림
@@ -27,9 +27,9 @@
 	- 대용량
 - 입출력장치
 	- 사람과 컴퓨터 사이의 소통 창구
-	- 입력 `input`: 사람이 컴퓨터로 정보를 전달
+	- 입력(input): 사람이 컴퓨터로 정보를 전달
 		- 키보드, 마우스, 트랙패드, 디스프레이 패드, 마이크, 카메라, ...
-	- 출력 `output`: 컴퓨터가 사람에게 정보를 전달
+	- 출력(output): 컴퓨터가 사람에게 정보를 전달
 		- 모니터, 스피커, 프린터, ...
 
 #### 1-1-2. 프로그램의 실행
@@ -38,7 +38,7 @@
 - 프로그래밍은 프로그램을 작성하는 행위이다. 코딩(coding)이라고 하기도 한다.
 - 컴퓨터의 프로그램 실행 절차
 	- 작성한 프로그램은 외부저장장치에 파일로 저장
-	- 파일에 저장된 프로그램을 메모리에 카피(= 로딩(loading)
+	- 파일에 저장된 프로그램을 메모리에 카피 = 로딩(loading)
 	- 프로세서가 로딩된 프로그램을 실행
 - 기계수준 언어 (machine language, low-level language)
 	- 컴퓨터 프로세서가 이해하고 실행할 수 있는 0과 1의 이진수의 조합으로 표현된 언어
@@ -74,6 +74,7 @@
 	- 컴퓨터 하드웨어 기종에 따라 프로세서가 다르고, 프로세서마다 이해하는 기계수준 언어가 다르다.
 	- 따라서 컴퓨터 기종별로 전용 컴파일러를 따로 준비해야 해서 불편하다.
 	- 그런데 컴퓨터 하드웨어 기종별로 JVM 소프트웨어를 준비해두면, Java Bytecode로 컴파일하는 컴파일러 하나만 준비해두면 된다.
+	- 우수한 이식성(portability): 하드웨어 또는 운영체제와 상관없이 어디에서나 실행가능하고 항상 일정한 실행 결과 보장
 
 #### 1-1-4. Java 프로그램의 작동 개념
 
@@ -89,7 +90,7 @@
 - 즉, 이 객체가 갖고 있는 문자열의 길이을 알고 싶으면 `length()` 메소드 호출 메시지를 이 객체에 보낸다. 그러면 이 객체는 해당 기능을 수행하여 결과인 `5`를 내준다. 
 
 - 자바 프로그램 세상에서 계산이란 등장 객체들끼리 메시지 전달을 통한 소통의 연속으로 볼 수 있다.
-- 이와 같은 프로그램이 작동하는 패러다임을 객체지향 프로그래밍, 영어로 Object-Oriented Programming, 또는 줄여서 OOP 라고 한다.
+- 프로그램이 이와 같은 방식으로 작동하는 패러다임을 객체지향 프로그래밍, 영어로 Object-Oriented Programming, 또는 줄여서 OOP, 패러다임이라고 한다.
 
 #### 1-1-5. Java 프로그래밍 준비
 
@@ -123,7 +124,7 @@
 	- `hello` 폴더 안에 `bin`과 `src` 폴더가 생성됨
 	- `src` 폴더에는 작성하는 소스 코드가 보관되고, `bin` 폴더에는 컴파일된 바이트 코드가 보관됨
 
-<img src="https://i.imgur.com/jsVcKuF.png" width="400">
+<img src="https://i.imgur.com/jsVcKuF.png" width="200">
 
 - 메뉴에서 `Class` 클릭하여 클래스 만들기
 	- `Package` 이름은 (당분간) 빈칸으로 둠
@@ -139,10 +140,10 @@
 <img src="https://i.imgur.com/bLSKt8Q.png" width="400">
 
 - 라인 2에서 `public class`는 공개 클래스임을 나타내는 키워드이고,
-- 이어서 나오는 `HelloWorld`는 클래스의 이름을 나타냄
-- 라인 4-7은 `main` 메소드(method)라고 하며,
-- 애플리케이션 실행과 동시에 저절로 바로 실행되므로 시동을 거는 역할을 한다고 볼 수 있음
-- 메인 메소드의 몸체를 이루는 중괄호 사이에 코드를 작성함
+- 이어서 나오는 `HelloWorld`는 클래스의 이름을 나타낸다.
+- 라인 4-7은 `main` 메소드(method)라고 하며, 애플리케이션 실행과 동시에 저절로 바로 실행되므로 시동을 거는 역할을 한다고 볼 수 있다.
+- `main` 메소드 앞에 `static` 이라는 키워드는 이 메소드가 클래스소속임을 나타낸다. (객체를 만들지 않고 호출이 가능함)
+- 메인 메소드의 몸체를 이루는 중괄호 사이에 코드를 작성한다.
 
 #### 구현
 
@@ -180,7 +181,7 @@ public class HelloWorld {
 2. `System` 클래스의 `out` 필드에 연결되어 있는 `PrintStream` 객체에 `println("Hello, World!")` 메시지를 보낸다.
 3. `PrintStream` 객체는 `"Hello, World!"`를 콘솔창에 프린트 한다.
 
-<img src="https://i.imgur.com/ktYceOk.png" width="400">
+<img src="https://i.imgur.com/ktYceOk.png" width="600">
 
 
 
@@ -216,7 +217,7 @@ public class HelloWorld {
 
 -	메뉴에서 `Run` 버튼을 찾아서 클릭하여 실행하여, 다음과 같은 출력창이 생기는지 확인
 
-<img src="https://i.imgur.com/sEIA0I6.png" width="300">
+<img src="https://i.imgur.com/sEIA0I6.png" width="200">
 
 
 #### 실행 추적을 통한 실행 의미의 이해
@@ -259,7 +260,7 @@ public class Clock {
 3. 전달받은 현재 시각을 콘솔창에 출력해달라는 `println` 메시지를 `PrintStream` 객체에 보낸다.
 4. `PrintStream` 객체는 전달받은 현재 시각을 콘솔창에 프린트 한다.
 
-<img src="https://i.imgur.com/keu2ovV.png" width="400">
+<img src="https://i.imgur.com/keu2ovV.png" width="600">
 
 
 
@@ -290,7 +291,7 @@ public class Clock {
 3. 전달받은 현재 시각을 `Messsage` 출력창에 프린트해달라는 `showMessageDialog` 메시지를 `JOptionPane` 클래스에 보낸다.
 4. `JOptionPane` 클래스는 전달받은 현재 시각을 새긴 메시지 출력창을 띄운다.
 
-<img src="https://i.imgur.com/pygbvpg.png" width="400">
+<img src="https://i.imgur.com/pygbvpg.png" width="600">
 
 
 
