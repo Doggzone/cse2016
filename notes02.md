@@ -194,7 +194,7 @@ public class Geometry {
 }
 ```
 
-<img src="https://i.imgur.com/QWPTVWd.png" width="320">
+<img src="https://i.imgur.com/SFuWJmr.png" width="320">
 
 #### 사례 3. 논리 연산
 
