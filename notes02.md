@@ -6,7 +6,7 @@
 
 ### 2-1. Java 기본타입 값의 종류 및 표현
 
-<img src="https://i.imgur.com/51hFP5e.png" width="700">
+<img src="https://i.imgur.com/5oQPc0X.png" width="700">
 
 - 논리값(`boolean`)은 `true`, `false` 두 값만 있다. 따라서 이 값을 저장하는데 필요한 공간은 1 bit 이지만, Java에서 다루는 데이터의 최소 단위가 1 byte (= 8 bit) 이기 때문에 낭비에도 뷸구하고 1 byte의 공간을 사용한다.
 - 문자(`char`)는 '\u0000' \~ '\uFFFF' 범위의 유니코드(Unicode) 문자를 모두 포함하기 위해서 2 byte (= 16 bit)의 공간을 사용한다.
