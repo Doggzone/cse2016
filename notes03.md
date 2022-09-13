@@ -1,5 +1,5 @@
 ```
-(c)도경구 version 1.0 (2022/09/13)
+(c)도경구 version 1.01 (2022/09/13)
 ```
 
 ## 3. 클래스와 메소드
@@ -8,8 +8,7 @@
 
 #### 클래스와 객체
 
-클래스(class)는 Java 애플리케이션 프로그램의 하나의 부품 단위이며, 파일별로 클래스 하나씩 존재한다.
-그리고 클래스의 이름은 파일이름과 동일해야 한다. 클래스의 이름이 `MyClassName`이면, 그 클래스를 담고 있는 파일의 이름은 `MyClassName.java` 이다. 클래스의 이름은 변수 이름과는 달리 대문자로 시작하고 단어의 후속 문자는 소문자로 쓰는게 관례이다. 두 단어 이상을 이어붙이는 경우 `MyClassName`의 사례에서 볼 수 있듯이 각 단어의 첫 문자는 대문자로 쓴다.
+Java 애플리케이션 프로그램은 하나 이상의 클래스(class)로 구성한다. 파일별로 클래스를 하나씩 담을 수 있고, 클래스의 이름은 파일이름과 동일해야 한다. 클래스의 이름이 `MyClassName`이면, 그 클래스를 담고 있는 파일의 이름은 `MyClassName.java`으로 지어야 한다. 클래스의 이름은 변수 이름과는 달리 대문자로 시작하고 단어의 후속 문자는 소문자로 쓰는게 관례이다. 두 단어 이상을 이어붙이는 경우 `MyClassName`의 사례에서 볼 수 있듯이 각 단어의 첫 문자는 대문자로 쓴다.
 
 클래스는 다음과 같은 형식으로 작성한다.
 
@@ -19,21 +18,20 @@ public class MyClassName {
 }
 ```
 
-`public`은 미리 예약해둔 키워드로서 작성한 클래스를 공개되므로 누구나 사용할 수 있다는 표시이다.
+`public`은 미리 예약해둔 키워드로서, 작성한 클래스는 공개되므로 누구나 사용할 수 있다는 표시이다.
 
-클래스는 객체(object)를 만드는 일종의 형(template)이라고 할 수 있다. 메모리 상에 거주하는 실체(instance)로 만들기 위해서는 다음과 같은 형식으로 객체를 만들어야 한다.
+클래스는 객체(object)를 만드는 일종의 형판(template)이라고 할 수 있다. 메모리 상에 거주하는 실체(instance)로 만들기 위해서는 다음과 같은 형식으로 객체를 만들어야 한다.
 
 ```
 new MyClassName()
 ```
 
-이 코드를 실행하면 `MyClassName` 객체를 하나 만들어 메모리에 올려놓고, 그 주소를 결과값으로 내준다. 그 객체를 사용하려면 다음과 같이 변수에 그 주소를 기억해두어야 한다.
+이 코드를 실행하면 `MyClassName` 객체를 하나 만들어 메모리에 올려놓고, 그 주소를 결과값으로 내준다. 만든 객체를 추후에 쓰려면 다음과 같이 그 주소를 저장할 `MyClassName` 타입의 변수를 선언하고 그 변수에 저장해두어야 한다. 
 
 ```
-MyClassName my_object_name = new MyClassName();
+MyClassName my_object_name;
+my_object_name = new MyClassName();
 ```
-
-방금 생성한 `MyClassName` 객체는 `my_object_name` 라는 변수를 선언하여 기억해둘 수 있는데, 이 변수의 타입은 클래스의 이름이다.
 
 #### 메소드
 
@@ -48,7 +46,7 @@ public class MyClassName {
 }
 ```
 
-메소드 이름은 `myMethodName`과 같이 소문자로 시작하여 모두 소문자로 쓰되, 두 단어 이상을 이어붙이는 경우 째 단어부터 각 단어의 첫 문자는 모두 대문자로 쓴다. 메소드 이름을 가운데 두고 왼쪽에는 이 메소드의 계산 결과 타입을 명시하고, 오른쪽에는 괄호 안에 <u>파라미터(parameter)</u> `par_1`, ..., `par_n`을 0개 이상 변수선언과 같은 형식으로 나열한다.
+메소드 이름은 `myMethodName`과 같이 소문자로 시작하여 모두 소문자로 쓰되, 두 단어 이상을 이어붙이는 경우 둘째 단어부터 각 단어의 첫 문자는 모두 대문자로 쓴다. 메소드 이름을 가운데 두고 왼쪽에는 이 메소드의 계산 결과 타입을 명시하고, 오른쪽에는 괄호 안에 <u>파라미터(parameter)</u> `par_1`, ..., `par_n`을 0개 이상 변수선언과 같은 형식으로 나열한다.
 
 이 메소드를 호출하려면 메소드가 소속되어 있는 객체를 다음과 같은 형식으로 지정해주어야 한다.
 
@@ -65,12 +63,12 @@ MyClassName my_object_name = new MyClassName();
 
 나열한 식, `<exp_1>`, ..., `<exp_n>`을 <u>인수(argument)</u>라고 하는데, 이 때 인수의 개수는 해당 메소드의 파라미터의 개수와 같아야 한다. 아울러 메소드를 호출하면 인수 식을 차례로 모두 계산하여, 그 결과를 같은 위치의 파라미터 변수에 지정한 상태에서 해당 메소드의 몸체를 실행한다. 메소드가 내주는 값은 메소드 몸체 내부에 작성해둔 `return <exp>`이 결정하는데, 이 문장을 실행하면 `<exp>`를 계산할 결과를 메소드 호출의 결과로 내주게 된다. 이 때 내주는 결과 값의 타입은 메소드에 명시한 `<return_type>`과 일치해야 한다.
 
-메소드 맨앞에 붙이는 `public`은 외부에 공개한다는 의미로 해당 메소드는 객체의 외부에서 호출하여 사용할 수 있다. 반대로 `private`이라고 쓰면 클래스 내부용이라는 의미로, 객체의 외부에 노출이 되지 않아 내부에서만 호출하여 사용할 수 있다.
+메소드 맨앞에 붙이는 `public`은 외부에 공개한다는 의미로, 해당 메소드는 객체의 외부에서 호출하여 사용할 수 있다. 반대로 `private`이라고 쓰면 클래스 내부용이라는 의미로, 객체의 외부에 노출이 되지 않아 내부에서만 호출하여 사용할 수 있다.
 
 메소드 몸체에 `return <exp>`이 없으면 내주는 값이 없게 되는데, 이 경우 `<return_type>`은 `void`로 쓴다.
 
-이제 클래스와 메소드의 작성 방법과 의미를 간단히 살펴보았으니, 이게 간단한 Java 애플리케이션을 설계하고 구현할 준비가 되었다.
-지난 시간에 공부한 간단한 애플리케이션을 재활용하여, MVC 아키텍처를 기반으로 설계도를 작성하고, 그 설계도에 기반하여 애플리케이션을 재작성하면서 설계와 구현의 개념을 이해해보자.
+이제 클래스와 메소드의 작성 방법과 의미를 간단히 살펴보았으니, 간단한 Java 애플리케이션을 설계하고 구현할 준비가 되었다.
+지난 시간에 공부한 간단한 애플리케이션을 가져다, MVC 아키텍처를 기반으로 설계도를 작성하고, 그 설계도에 기반하여 애플리케이션을 재작성하면서 설계와 구현의 개념을 이해해보자.
 
 
 ### 3-2. MVC 아키터처 기반 객체지향 애플리케이션 설계
@@ -91,7 +89,7 @@ MVC 아키텍처에 기반한 설계도에서 클래스는 다음과 같이 4 �
 
 <img src="https://i.imgur.com/BwMkxcK.png" width="500">
 
-화살표는 사용 관계를 나타낸다. `Starter` 클래스는 애플리케이션 실행을 위하여 시동을 거는 역할을 하는 클래스로, 실행을 위해 필요한 객체를 만들어 메모리에 등장시키고 실행의 매니저 역할을 `Controller` 클래스에 넘긴다. `Controller`는 애플리케이션의 실행을 지휘하는 역할을 담당한다. 따라서 `Model`과 `View` 클래스를 사용하여 실행 업무를 수행한다. `Model` 클래스는 핵심 계산을 수행하는 두뇌 역할을 담당하는데, 실제 계산을 수행하는 선수라고 할 수 있다. 당연히 필요에 따라 여러 개를 만들 수도 있다. `View` 클래스는 외부와의 소통 창구 역할을 담당한다. 필요하면 입력 클래스와 출력 클래스를 따로 둘 수도 있다.
+화살표는 사용 관계를 나타낸다. `Starter` 클래스는 애플리케이션 실행을 위하여 시동을 거는 역할을 하는 클래스로, 실행을 위해 필요한 객체를 만들어 메모리에 등장시키고 실행의 매니저 역할을 `Controller` 클래스에 넘긴다. `Controller`는 애플리케이션의 실행을 지휘하는 역할을 담당한다. 따라서 `Model`과 `View` 클래스를 사용하여 실행 업무를 수행하도록 기획한다. `Model` 클래스는 핵심 계산을 수행하는 두뇌 역할을 담당하는데, 실제 계산을 수행하는 선수라고 할 수 있다. 당연히 필요에 따라 여러 개를 만들 수도 있다. `View` 클래스는 외부와의 소통 창구 역할을 담당한다. 필요하면 입력 클래스와 출력 클래스를 따로 둘 수 있다.
 
 MVC의 각 역할을 대략 이해했으니 이제 사례를 통해서 객체제향 애플리케이션을 설계하는 방법을 습득해보자.
 
@@ -111,7 +109,7 @@ public class HelloWorld {
 }
 ```
 
-#### GUI 버전
+#### Swing 버전
 
 ```
 import javax.swing.*;
@@ -201,7 +199,7 @@ public class Clock {
 }
 ```
 
-#### GUI 버전
+#### Swing 버전
 
 ```
 import java.time.*;
@@ -401,15 +399,15 @@ import java.time.*;
 
 public class Calendar {
 
-	public static void main(String[] args) {
-		LocalDate today = LocalDate.now();
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
         int year = today.getYear();
-	    LocalDate xmas = LocalDate.of(year,12,25);
-	    Period p = Period.between(today,xmas);
-	    int months = p.getMonths();
-		int days = p.getDays();
-		String message = "크리스마스까지 " + months + "달 " + days + "일 남았다.";
-		System.out.println(message);
+        LocalDate xmas = LocalDate.of(year,12,25);
+        Period p = Period.between(today,xmas);
+        int months = p.getMonths();
+        int days = p.getDays();
+        String message = "크리스마스까지 " + months + "달 " + days + "일 남았다.";
+        System.out.println(message);
 	}
 
 }
@@ -421,7 +419,7 @@ public class Calendar {
 	-	특정 날짜를 년,월,일을 정수로 제공하여 `LocalDate` 객체를 만들 수 있다. 클래스소속 메소드 `LocalDate.of(int year, int month, int day)`를 형식에 맞추어 호출하면 된다.
 -	`java.time` 패키지에서 제공하는 `Period`는 기간을 년,월,일 단위로 구분하여 처리할 수 있는 다양한 기능을 갖춘 클래스이다.
 	-	시작 `LocalDate` 객체 `from`과 종료 `LocalDate` 객체 `to`를 가지고, `LocalDate.between(from,to)`를 호출하여 두 날짜 사이의 기간 정보를 갖고 있는  `Period` 객체를 만들 수 있다.
-	-	`Period` 객체 `p`가 가지고 있는 년/월/일 정보는 `p.getYears()`, `p.getMonths()`, `p.getDays()` 메소드로 각각 `int` 값으로 추출할 수 있다.
+	-	`Period` 객체 `p`가 가지고 있는 년,월,일 정보는 `p.getYears()`, `p.getMonths()`, `p.getDays()` 메소드로 각각 `int` 값으로 추출할 수 있다.
 - 참고: [Java API Documentatio 링크](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/time/package-summary.html)
 
 
@@ -456,4 +454,4 @@ public class Calendar {
 
 #### 문제 3. 숙제#1로 완성한 애플리케이션을 MVC 아키텍처 기반으로 설계도를 작성하고 이를 바탕으로 애플리케이션을 재작성
 
-제출 요령: 숙제 문제별로 개별 업로드하고, 숙제 3은 설계도 파일을 소스파일과 함께 업로드.
+제출 요령: 숙제 문제별로 개별 업로드하고, 문제 3은 설계도 파일을 소스파일과 함께 업로드.
