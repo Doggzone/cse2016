@@ -444,13 +444,35 @@ public class Calendar {
 
 오늘부터 100일 뒤는 몇 년, 몇 월, 며칠인지 알려주는 기능을 위에서 작성한 `Calandar` 애플리케이션에 추가하자.
 
-<img src="https://i.imgur.com/YkCgwDf.png" width="600">
+<img src="https://i.imgur.com/2sAGnJy.png" width="600">
 
 #### 문제 2. 특정 년,월,일부터 100일 뒤는 몇 년, 몇 월, 며칠?
 
 이번에는 년,월,일 정보를 사용자로부터 받아서, 그날부터 100일 뒤는 몇 년, 몇 월, 며칠인지 알려주는 기능을 추가하자.
 
-<img src="https://i.imgur.com/ow7syI5.png" width="600">
+<img src="https://i.imgur.com/FChRw4j.png" width="600">
+
+#### 문제 1번과 문제 2번을 통합한 `Controller.java` 사례
+
+```
+import java.time.*;
+
+public class Controller {
+	
+	public void control(Model m, ViewIn in, ViewOut out) {
+		// 문제 1
+		LocalDate d = m.hundredDaysFromToday();
+		out.showDate(d,"오늘부터 100일 뒤는 며칠?\n");
+		// 문제 2
+		LocalDate date0 = in.getDate("년, 월, 일을 차례로 입력해주세요.");
+		LocalDate date100 = m.hundredDaysFrom(date0);
+		out.showDate(date0, date100, " 부터 100일 뒤는 며칠?\n");
+	}
+
+}
+```
+
+
 
 #### 문제 3. 숙제#1로 완성한 애플리케이션을 MVC 아키텍처 기반으로 설계도를 작성하고 이를 바탕으로 애플리케이션을 재작성
 
