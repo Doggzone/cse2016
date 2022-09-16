@@ -390,7 +390,7 @@ public class Circle{
 
 #### 설계도: 클래스 다이어그램
 
-<img src="https://i.imgur.com/5B72Hlo.png" width="600">
+<img src="https://i.imgur.com/4Q1kgfJ.png" width="600">
 
 #### 구현 가이드
 
