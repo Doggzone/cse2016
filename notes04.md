@@ -212,7 +212,7 @@ g.fillArc(50, 125, 200, 200, 290, 20);
 
 지금까지 공부한 내용을 바탕으로 현재 시각을 표시하는 아날로그 시계를 다음과 같이 보여주는 윈도우를 만들어보자.
 
-<img src="https://i.imgur.com/1J9on2Z.png" width="200">
+<img src="https://i.imgur.com/1J9on2Z.png" width="400">
 
 
 구현한 프로그램은 다음과 같다.
