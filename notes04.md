@@ -360,7 +360,7 @@ public class ClockWriter extends JPanel {
 - 창을 최소화 했다가 다시 띄울때마다 핑크색 원이 일정 비율로 커짐
 - 전체를 채운 후에는 다시 처음으로 돌아가 같은 패턴을 반복
 
-<img src="https://i.imgur.com/YArfnTX.png" width="600">
+<img src="https://i.imgur.com/zyspdEP.png" width="600">
 
 
 ### 숙제 : 아날로그 시계 - 기능 추가
