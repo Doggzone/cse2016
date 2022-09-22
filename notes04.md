@@ -203,7 +203,7 @@ int x1 = 150;
 int y1 = 225;
 int x2 = x1 + (int)(125 * Math.cos(Math.PI / 6));
 int y2 = y1 + (int)(125 * Math.sin(Math.PI / 6));
-g.drawLine(150, 225, x2, y2);
+g.drawLine(x1, y1, x2, y2);
 ```
 
 <img src="https://i.imgur.com/JxLYIXB.png" width="400">
@@ -369,5 +369,5 @@ public class ClockWriter extends JPanel {
 1. 아날로그 시계의 초를 동심원의 크기로 나타내자.
    - 시계판의 반지름이 `r`일때, `t`초에서 동심원의 반지름은 `r*t/60`이다.
 2. 시계에 눈금을 추가한다.
-   - 다지인은 자유이다.
+   - 디자인은 자유이다.
    - 도형을 사용하여 눈금을 표시해도 좋고, 숫자를 넣어도 좋다.
