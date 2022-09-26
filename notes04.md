@@ -14,6 +14,7 @@ public class ClassName {
     public ClassName(<type_1> par_1, …,<type_n> par_n) {
         // 몸체 코드 블록
     }
+
 }
 ```
 여기서 괄호 안에 나열한 `<type_1> par_1`, ..., `<type_n> par_n` 은 <b>파라미터(parameter)</b> 라고 하는데, (일반 메소드 파라미터와 마찬가지로) 변수 선언 형식과 동일하며, 0개 이상 원하는 만큼 나열할 수 있다.
@@ -26,6 +27,7 @@ new ClassName(<exp_1>, …, <exp_n>)
 public class ClassName {
 
     public ClassName() { }
+
 }
 ```
 따라서 지금까지의 객체 생성은 모두 다음과 같은 형식이었었다.
@@ -66,6 +68,7 @@ public class ClockWriter extends JPanel {
     public static void main(String[] args) {
         new ClockWriter();
     }
+
 }
 ```
 
@@ -118,6 +121,7 @@ public class ClockWriter extends JPanel {
     public static void main(String[] args) {
         new ClockWriter();
     }
+
 }
 ```
 
@@ -243,6 +247,7 @@ public class ClockWriter extends JPanel {
     public static void main(String[] args) {
         new ClockWriter();
     }
+
 }
 ```
 
@@ -260,7 +265,7 @@ import java.awt.*;
 
 public class ClockWriter extends JPanel {
 
-	private final int SIZE;
+    private final int SIZE;
 
     public ClockWriter(int n) {
     	SIZE = n;
@@ -283,6 +288,7 @@ public class ClockWriter extends JPanel {
     public static void main(String[] args) {
         new ClockWriter(250);
     }
+
 }
 ```
 
@@ -351,6 +357,7 @@ public class ClockWriter extends JPanel {
     public static void main(String[] args) {
         new ClockWriter(250);
     }
+    
 }
 ```
 
