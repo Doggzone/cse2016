@@ -41,26 +41,26 @@
 ```
 public class Dice {
 	
-	private int face1;
-	private int face2;
-	private int sum;
-	private int difference;
-	private boolean twin;
+    private int face1;
+    private int face2;
+    private int sum;
+    private int difference;
+    private boolean twin;
 	
-	public int face1() { return face1; }	
-	public int face2() { return face2; }	
-	public int sum() { return sum; }
-	public int difference() { return difference; }
-	public boolean twin() { return twin; }
+    public int face1() { return face1; }	
+    public int face2() { return face2; }	
+    public int sum() { return sum; }
+    public int difference() { return difference; }
+    public boolean twin() { return twin; }
 	
-	public void rollDice() {
-		face1 = (int)(Math.random() * 6) + 1;
-		face2 = (int)(Math.random() * 6) + 1;
-		sum = face1 + face2;
-		difference = Math.abs(face1 - face2);
-		if (face1 == face2) 
-			twin = true;
-	}
+    public void rollDice() {
+        face1 = (int)(Math.random() * 6) + 1;
+        face2 = (int)(Math.random() * 6) + 1;
+        sum = face1 + face2;
+        difference = Math.abs(face1 - face2);
+        if (face1 == face2) 
+            twin = true;
+    }
 }
 ```
 
@@ -110,6 +110,7 @@ public class Player {
 	public void reset() {
 		wins = false;
 	}
+
 }
 ```
 
@@ -134,13 +135,14 @@ import javax.swing.*;
 
 public class Registrar {
 	
-	public String invitePlayer() {
-		return JOptionPane.showInputDialog("이름을 등록해 주세요.");	
-	}
+    public String invitePlayer() {
+        return JOptionPane.showInputDialog("이름을 등록해 주세요.");	
+    }
 	
-	public int wantToContnue() {
-		return JOptionPane.showConfirmDialog(null, "더 하시겠어요?");
-	}
+    public int wantToContnue() {
+        return JOptionPane.showConfirmDialog(null, "더 하시겠어요?");
+    }
+
 }
 ```
 
@@ -178,13 +180,13 @@ public class Registrar {
 ```
 public class DiceGame {
 
-	public static void main(String[] args) {
-		Registrar r = new Registrar();
-		Player p1 = new Player(r.invitePlayer());
-		Player p2 = new Player(r.invitePlayer());
-		GameBoard b = new GameBoard(p1, p2);
-		new Dealer().dealDiceGame(p1,p2,b,r);
-	}
+    public static void main(String[] args) {
+        Registrar r = new Registrar();
+        Player p1 = new Player(r.invitePlayer());
+        Player p2 = new Player(r.invitePlayer());
+        GameBoard b = new GameBoard(p1, p2);
+        new Dealer().dealDiceGame(p1,p2,b,r);
+    }
 }
 ```
 
