@@ -2,6 +2,7 @@
 (c)도경구 
 version 1.01 (2022/09/13)
 version 1.02 (2022/09/16) 숙제 오타 수정 및 샘플 코드 추가
+version 1.03 (2022/09/26) 숙제 모범답안 코드 추가
 ```
 
 ## 3. 클래스와 메소드
@@ -650,7 +651,7 @@ public class Calendar {
 
 #### 문제 3.
 
-<img src="https://i.imgur.com/4Q1kgfJ.png" width="600">
+<img src="https://i.imgur.com/5GsIUOZ.png" width="600">
 
 
 #### `Model.java`
