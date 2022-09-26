@@ -251,9 +251,9 @@ public class HelloWorld {
 import java.time.*;
 
 public class Clock {
-	public static void main(String[] args) {
-		System.out.println(LocalTime.now());
-	}
+    public static void main(String[] args) {
+        System.out.println(LocalTime.now());
+    }
 }
 ```
 
@@ -284,7 +284,6 @@ public class Clock {
         JOptionPane.showMessageDialog(null, LocalTime.now());
     }
 }
-
 ```
 
 
