@@ -28,7 +28,7 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 |:----:|:-----:|:-----:|:-----:|
 |  1 | 9/1,9/2 | 첫 애플리케이션 만들기: [노트](notes01.md), [슬라이드](slide01.pdf) | - |
 |  2 | 9/8 | 식, 변수, 타입: [노트](notes02.md), [슬라이드](slide02.pdf) | #1 마감 9/19(월) 자정|
-|  3 | 9/15,9/16 | 클래스와 메소드: [노트](notes03.md), [슬라이드](slide03.pdf) | #2 마감 9/22(목) 수업전 |
+|  3 | 9/15 [3pm](https://youtu.be/bnLpb6BzvXk) ,9/16 [1pm](https://youtu.be/PM9iABnuCLw) | 클래스와 메소드: [노트](notes03.md), [슬라이드](slide03.pdf) | #2 마감 9/22(목) 수업전 |
 |  4 | 9/22 [1pm](https://youtu.be/OwUOWd3ewTI) [3pm](https://youtu.be/wo_gRLLBxJ0), 9/23 [11am](https://youtu.be/oelk6Yyo3uM) [1pm](https://youtu.be/Qai4637GnVI) | 생성 메소드와 필드 변수: [노트](notes04.md), [슬라이드](slide04.pdf) |  #3 마감 9/29(목) 수업전 |
 |  5 | 9/29,9/30 | 제어 구조 1 : 선택: [노트](notes05.md), [슬라이드](slide05.pdf) |  #4 마감 10/6(목) 수업전 |
 |  6 | 10/6,10/7 | 제어 구조 2 : 반복 |  #5 |
