@@ -666,7 +666,7 @@ public class BounceTheBall {
 
 
 ## 숙제 -  데스크 탑 용 시계 완성 (제출 마감: 10월 13일 목요일 수업 시작 전)
-4주차에 숙제로 완성했던 아날로그 시계를 이번에는 스스로 작동하도록 개선하자.
+4주차에 숙제로 완성했던 아날로그 시계를 이번에는 스스로 작동하도록 개선해보자.
 
 - 아날로그 시계의 분침과 시침은 그대로 쓰고, 초침은 동심원을 활용한다. 시계판의 지름을 60등분하여 1초에는 동심원의 지름이 1/60, 2초에는 2/60, ..., 계속하여 0초가 되면 동심원이 시계판을 가득채우고, 다시 1초부터 동일하게 반복한다. 동심원은 1초 마다 커져야 하고, 분침은 1분에 한칸씩 움직이고, 시침은 분침이 움직일 때 비율에 맞추어 움직여야 한다.
 
@@ -679,3 +679,35 @@ public class BounceTheBall {
 - 시계 디자인은 위 그림과 같을 필요가 없고 각자 자유에 맡긴다.
 
 - [시계 작동 사례 동영상](https://youtu.be/U3Sb-vaQYxE)
+
+- 스타터 클래스 `Clock`과 컨트롤러 클래스 `ClockController`는 이미 아래와 같이 주어졌다. 지난 숙제로 완성한 `ClockWriter` 클래스를 위의 요구사항에 맞게 수정하여 애플리케이션을 완성한다. 모델의 역할은 너무 단순하여 굳이 클래스를 따로 두지 않는다.
+
+```
+public class ClockController {
+    
+    /** delay - how_long millisecond 동안 실행 정지  */
+    private void delay(int how_long) { 
+        try { Thread.sleep(how_long); }
+        catch (InterruptedException e) { }
+    }
+    
+    public void switchOn(ClockWriter clock) {
+        while (true) { 
+            delay(20);
+            clock.repaint();
+        }
+    }
+
+}
+```
+
+```
+public class Clock {
+    
+    public static void main(String[] args) {
+        ClockWriter clock = new ClockWriter(240);
+        new ClockController().switchOn(clock);
+    }
+
+}
+```
