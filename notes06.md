@@ -1,6 +1,7 @@
 ```
 (c)도경구 version 0.5 (2022/10/03)
 version 0.51 (2022/10/04) 숙제 문제 보완
+version 0.52 (2022/10/07) bouncingball 코드 개선
 ```
 
 ## 5. 제어 구조 II - 반복
@@ -415,8 +416,8 @@ public class Box {
         return (y_position <= 0 ) || (y_position >= BOX_SIZE);
     }
 
-    /** sizeOf - 상자의 크기를 리턴 */
-    public int sizeOf() {
+    /** size - 상자의 크기를 리턴 */
+    public int size() {
         return BOX_SIZE;
     }
 }
@@ -448,28 +449,28 @@ public class MovingBall {
         container = box;
     }
 
-    /** xPosition - 공의 x축 위치 리턴 */
-    public int xPosition() {
+    /** x_pos - 공의 x축 위치 리턴 */
+    public int x_pos() {
         return x_pos;
     }
 
-    /** yPosition - 공의 y축 위치 리턴 */
-    public int yPosition() {
+    /** y_pos - 공의 y축 위치 리턴 */
+    public int y_pos() {
         return y_pos;
     }
 
-    /** radiusOf - 공의 반지름 리턴 */
-    public int radiusOf() {
+    /** radius - 공의 반지름 리턴 */
+    public int radius() {
         return radius;
     }
 
     /** move - time_unit 만큼 공을 이동, 벽에 부딪치면 방향을 바꿈
-     * @param time_units - 프레임 사이의 시간 */
-    public void move(int time_units) {
-        x_pos = x_pos + x_velocity * time_units;
+     * @param time_unit - 프레임 사이의 시간 */
+    public void move(int time_unit) {
+        x_pos += x_velocity * time_unit;
         if (container.inHorizontalContact(x_pos))
             x_velocity = - x_velocity;
-        y_pos = y_pos + y_velocity * time_units;
+        y_pos += y_velocity * time_unit;
         if (container.inVerticalContact(y_pos))
             y_velocity = - y_velocity;
     }
@@ -486,8 +487,8 @@ public class TestModel {
         MovingBall ball = new MovingBall(25, 25, 10, box);
         for (int i = 0; i < 10; i++) {
             ball.move(1);
-            System.out.print("x = " + ball.xPosition());
-            System.out.println(", y = " + ball.yPosition());
+            System.out.print("x = " + ball.x_pos());
+            System.out.println(", y = " + ball.y_pos());
         }
     }
 }
@@ -514,10 +515,10 @@ public class BoxWriter {
     /** paint - 상자 그리기
      * @param g - 그래픽스 펜 */
     public void paintComponent(Graphics g) {
-        int size = box.sizeOf();
-        g.setColor(Color.white);
+        int size = box.size();
+        g.setColor(Color.WHITE);
         g.fillRect(0, 0, size, size);
-        g.setColor(Color.black);
+        g.setColor(Color.BLACK);
         g.drawRect(0, 0, size, size);
     }
 }
@@ -529,24 +530,25 @@ import java.awt.*;
 /** BallWriter - 움직이는 공을 그림 */
 public class BallWriter {
 
-    private MovingBall ball;   // 공 객체
-    private Color balls_color; // 공의 색깔
+    private MovingBall ball; // 공 객체
+    private Color color;     // 공의 색깔
 
     /** Constructor BallWriter
      * @param x - 공 객체
      * @param c - 공의 색깔 */
     public BallWriter(MovingBall x, Color c) {
         ball = x;
-        balls_color = c;
+        color = c;
     }
 
     /** paint - 공 그리기
      * @param g - 그래픽스 펜  */
     public void paintComponent(Graphics g) {
-        g.setColor(balls_color);
-        int radius = ball.radiusOf();
-        g.fillOval(ball.xPosition() - radius, ball.yPosition() - radius,
-                   radius * 2, radius * 2);
+        g.setColor(color);
+        int radius = ball.radius();
+        int diameter = radius * 2;
+        g.fillOval(ball.x_pos() - radius, ball.y_pos() - radius, 
+                   diameter, diameter);
     }
 }
 ```
@@ -609,7 +611,7 @@ public class BounceController {
         while (true) {
             delay(painting_delay);
             ball.move(time_unit);
-            System.out.println(ball.xPosition() + ", " + ball.yPosition());
+            System.out.println(ball.x_pos() + ", " + ball.y_pos());
             writer.repaint();
         }
     }
@@ -630,13 +632,13 @@ public class BounceTheBall {
     public static void main(String[] args) {
         // 모델 객체 생성
         int box_size = 200;
-        int balls_radius = 6;
+        int ball_radius = 6;
         Box box = new Box(box_size);
         // 공을 상자의 적절한 위치에 둠
         MovingBall ball = new MovingBall((int)(box_size / 3.0),
                                          (int)(box_size / 5.0),
-                                         balls_radius, box);
-        BallWriter ball_writer = new BallWriter(ball, Color.red);
+                                         ball_radius, box);
+        BallWriter ball_writer = new BallWriter(ball, Color.RED);
         BoxWriter box_writer  = new BoxWriter(box);
         AnimationWriter writer = new AnimationWriter(box_writer, ball_writer, box_size);
         // 컨트롤러 객체를 생성하고 애니메이션 시작
