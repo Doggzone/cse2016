@@ -1,10 +1,19 @@
 ```
-(c)도경구 version 0.5 (2022/10/07) 실습 #6-1, #6-2 모범답안 코드
+(c)도경구 
+version 0.5 (2022/10/07) 실습 #6-1, #6-2 모범답안 코드
+version 0.6 (2022/10/09) 실습 #6-3 모범답안 코드
 ```
 
 ## 6. 실습 - 모범 답안 코드 
 
 ### 상자 속 공 굴리기 애니메이션 (확장)
+
+- 중앙에 다음과 같은 모양의 적당한 길이의 장애물을 설치한다. (색깔은 자유 선택)
+
+<img src="https://i.imgur.com/M7WbzTJ.png" width="100">
+
+- 공이 이 장애물 위면 또는 아래 면을 만나면 y축 진행 방향을 바꾼다.
+
 
 #### 실습#6-1. 파란 공을 하나 추가
 
@@ -137,11 +146,65 @@ public class BounceTheBall {
 
 #### 실습#6-3. 장애물 설치
 
-- 중앙에 다음과 같은 모양의 적당한 길이의 장애물을 설치한다.
+`Box` 클래스에 장애물 정보를 담은 필드 변수 추가
 
-<img src="https://i.imgur.com/M7WbzTJ.png" width="100">
+```
+    private final int BOX_SIZE;
+    private final int OBSTACLE_WIDTH;
+    private final int OBSTACLE_X0;
+    
+    public Box(int n) {
+        BOX_SIZE = n;
+        int width = n / 4;
+        OBSTACLE_WIDTH = width;
+        OBSTACLE_X0 = (n - width) / 2;
+    }
+    
+    public int box_size() { return BOX_SIZE; }
+    public int obstacleWidth() { return OBSTACLE_WIDTH; }
+    public int obstacleX0() { return OBSTACLE_X0; } 
+```
 
-- 공이 이 장애물 위면 또는 아래 면을 만나면 y축 진행 방향을 바꾼다.
+`Box` 클래스에 장애물 접촉 여부를 알려주는 메소드 추가
+
+```
+    public boolean inObstacleContact(int x, int y) {
+        return OBSTACLE_X0 <= x && x <= OBSTACLE_X0 + OBSTACLE_WIDTH && y == BOX_SIZE / 2;
+    }
+```
+
+`BoxWriter` 클래스의 `paintComponent` 메소드에 장애물 그리는 코드 추가
+
+```
+    public void paintComponent(Graphics g) {
+        int size = box.box_size();
+        g.setColor(Color.WHITE);
+        g.fillRect(0, 0, size, size);
+        g.setColor(Color.BLACK);
+        g.drawRect(0, 0, size, size);
+        g.setColor(Color.GRAY);
+        int x = box.obstacleX0();
+        int y = size / 2 - size / 80;
+        int width = box.obstacleWidth();
+        int height = size / 40;
+        g.fillRect(x, y, width, height);
+    }
+```
+
+`MovingBall` 클래스의 `move` 메소드를 장애물을 만났을 때 y축의 진행 방향을 바꾸는 코드 추가
+
+```
+    public void move(int time_units) {
+        x_pos += x_velocity;
+        if (container.inHorizontalContact(x_pos)) 
+            x_velocity = - x_velocity;
+        y_pos += y_velocity;
+        if (container.inVerticalContact(y_pos)) 
+            y_velocity = - y_velocity;
+        if (container.inObstacleContact(x_pos, y_pos))
+            y_velocity = - y_velocity;
+    }
+```
 
 
 ## 6. 숙제 - 모범 답안 코드 
