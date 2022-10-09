@@ -109,7 +109,7 @@ public class BounceTheBall {
 ```
 
 
-#### 실습#6-2. 츙돌시 진로 수정
+#### 실습#6-2. 충돌시 진로 수정
 
 `MovingBall` 클래스에 진로 수정 메소드 `reverse()` 추가 
 
