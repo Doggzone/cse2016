@@ -191,7 +191,7 @@ public class BounceTheBall {
     }
 ```
 
-`MovingBall` 클래스의 `move` 메소드를 장애물을 만났을 때 y축의 진행 방향을 바꾸는 코드 추가
+`MovingBall` 클래스의 `move` 메소드에 장애물을 만났을 때 y축의 진행 방향을 바꾸는 코드 추가
 
 ```
     public void move(int time_units) {
