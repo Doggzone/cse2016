@@ -423,7 +423,7 @@ public class SudokuPuzzle {
 
 ```
 
-그런데 모델 클래스 `Sudoku`와 컨트롤러 클래스 `SudokuController` 클래스만 아직 미완성이다. 다음 `Sudoku` 클래스의 명세서를 참고하여, 미완성인 아래 두 클래스의 빈 부분을 채워 구현을 완성하자.
+그런데 모델 클래스 `Sudoku`와 컨트롤러 클래스 `SudokuController` 클래스는 아직 미완성이다. 다음 `Sudoku` 클래스의 명세서를 참고하여, 미완성인 아래 두 클래스의 빈 부분을 채워 구현을 완성하자.
 
 <img src="https://i.imgur.com/wkwAgQm.png" width="700">
 
