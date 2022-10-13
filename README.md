@@ -27,11 +27,11 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 | 주 | 날짜 | 주제 | 숙제 |
 |:----:|:-----:|:-----:|:-----:|
 |  1 | [9/1,9/2](https://youtu.be/EzYXY1wI3qQ) | 첫 애플리케이션 만들기: [노트](notes01.md), [슬라이드](slide01.pdf) | - |
-|  2 | 9/8 | 식, 변수, 타입: [노트](notes02.md), [슬라이드](slide02.pdf), [해답코드](notes02sol.md) | #1 마감 9/19(월) 자정|
-|  3 | 9/15 [3pm](https://youtu.be/bnLpb6BzvXk) ,9/16 [1pm](https://youtu.be/PM9iABnuCLw) | 클래스와 메소드: [노트](notes03.md), [슬라이드](slide03.pdf), [해답코드](notes03sol.md) | #2 마감 9/22(목) 수업전 |
-|  4 | 9/22 [1pm](https://youtu.be/OwUOWd3ewTI) [3pm](https://youtu.be/wo_gRLLBxJ0), 9/23 [11am](https://youtu.be/oelk6Yyo3uM) [1pm](https://youtu.be/Qai4637GnVI) | 생성 메소드와 필드 변수: [노트](notes04.md), [슬라이드](slide04.pdf), [해답코드](notes04sol.md) |  #3 마감 9/29(목) 수업전 |
-|  5 | 9/29 [1pm](https://youtu.be/9UvCQokyw6w) [3pm](https://youtu.be/ZnMOUiy6jt0), 9/30 [11am](https://youtu.be/zjCAcffVPV4) [1pm](https://youtu.be/w7L1tTK4GaU) | 제어 구조 1 - 선택: [노트](notes05.md), [슬라이드](slide05.pdf), [해답코드](notes05sol.md) |  #4 마감 10/6(목) 수업전 |
-|  6 | 10/6 [1pm](https://youtu.be/qWywxvVs2UE) [3pm](https://youtu.be/kL6ATEcXjCY), [10/7](https://youtu.be/CmbXoruK71Q) | 제어 구조 2 - 반복: [노트](notes06.md), [슬라이드](slide06.pdf), [해답코드](notes06sol.md) |  #5 마감 10/13(목) 수업전 |
+|  2 | 9/8 | 식, 변수, 타입: [노트](notes02.md), [슬라이드](slide02.pdf) | #1 [해답코드](notes02sol.md)|
+|  3 | 9/15 [3pm](https://youtu.be/bnLpb6BzvXk) ,9/16 [1pm](https://youtu.be/PM9iABnuCLw) | 클래스와 메소드: [노트](notes03.md), [슬라이드](slide03.pdf) | #2 [해답코드](notes03sol.md) |
+|  4 | 9/22 [1pm](https://youtu.be/OwUOWd3ewTI) [3pm](https://youtu.be/wo_gRLLBxJ0), 9/23 [11am](https://youtu.be/oelk6Yyo3uM) [1pm](https://youtu.be/Qai4637GnVI) | 생성 메소드와 필드 변수: [노트](notes04.md), [슬라이드](slide04.pdf) |  #3 [해답코드](notes04sol.md) |
+|  5 | 9/29 [1pm](https://youtu.be/9UvCQokyw6w) [3pm](https://youtu.be/ZnMOUiy6jt0), 9/30 [11am](https://youtu.be/zjCAcffVPV4) [1pm](https://youtu.be/w7L1tTK4GaU) | 제어 구조 1 - 선택: [노트](notes05.md), [슬라이드](slide05.pdf) |  #4 [해답코드](notes05sol.md) |
+|  6 | 10/6 [1pm](https://youtu.be/qWywxvVs2UE) [3pm](https://youtu.be/kL6ATEcXjCY), [10/7](https://youtu.be/CmbXoruK71Q) | 제어 구조 2 - 반복: [노트](notes06.md), [슬라이드](slide06.pdf) |  #5 [해답코드](notes06sol.md) |
 |  7 | 10/13 [1pm](https://youtu.be/pVCSm03JBMw) [3pm](https://youtu.be/HIN5df3llwo), 10/14 | 자료 구조 - 배열: [노트](notes07.md), [슬라이드](slide07.pdf) | #6 마감 10/20(목) 수업전 |
 |  8 | 10/20 | 코딩시험 1 | - |
 |  9 | 10/27,10/28 | 상속을 활용한 프로그램 부품의 재활용 |  #7  |
