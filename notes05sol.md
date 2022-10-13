@@ -45,7 +45,6 @@ public class GameBoard extends JPanel {
         g.drawString(Integer.toString(player2.rolled().face2()), 230, 190);
     }
 	
-    /*
     public void display(Player winner, Player loser) {
         displayDice(winner);
         displayDice(loser);
@@ -67,7 +66,6 @@ public class GameBoard extends JPanel {
         dice_rolled = p.rolled();
         System.out.println(dice_rolled.face1() + ", " + dice_rolled.face2());
     }
-    */
 
 }
 ```
