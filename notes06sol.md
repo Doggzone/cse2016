@@ -1,7 +1,8 @@
 ```
 (c)도경구 
-version 0.5 (2022/10/07) 실습 #6-1, #6-2 모범답안 코드
-version 0.6 (2022/10/09) 실습 #6-3 모범답안 코드 추가
+version 0.5 (2022/10/07) 실습 #6-1, #6-2 답안 코드
+version 0.6 (2022/10/09) 실습 #6-3 답안 코드 추가
+version 1.0 (2022/10/13) 숙제 답안 코드 추가
 ```
 
 ## 6. 실습 - 모범 답안 코드 
@@ -208,3 +209,70 @@ public class BounceTheBall {
 
 ## 6. 숙제 - 모범 답안 코드 
 
+```
+import javax.swing.*;
+import java.awt.*;
+import java.time.*;
+
+public class ClockWriter extends JPanel {
+    
+    private final int SIZE;
+    
+    public ClockWriter(int size) {
+        SIZE = size;
+        JFrame frame = new JFrame();
+        frame.setTitle("Clock");
+        frame.setSize(SIZE+50, SIZE+110);
+        frame.getContentPane().add(this);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
+
+    public void paintComponent(Graphics g) {
+        // 현재시간 알아보기 
+        LocalTime now = LocalTime.now();
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        int second = now.getSecond(); 
+        // 디지털 시계
+        g.setColor(Color.BLACK);
+        String clock = format2(hour) + ":" + format2(minute) + ":" + format2(second);
+        g.drawString(clock, 116, 35);
+        // 아날로그 시계 
+        g.setColor(Color.LIGHT_GRAY);
+        g.fillOval(25, 60, SIZE, SIZE);
+        // 시계 중심 
+        int radius = SIZE / 2;
+        int x1 = 25 + radius;
+        int y1 = 60 + radius;
+        // 초침 그리기
+        int diameter = (second == 0) ? SIZE : SIZE / 60 * second;
+        int base = (SIZE - diameter) / 2;
+        g.setColor(Color.PINK);
+        g.fillOval(25+base, 60+base, diameter, diameter);
+        // 분침 그리기 
+        radius -= 30;
+        double minute_angle = (minute - 15) * Math.PI / 30;
+        int x2 = x1 + (int)(radius * Math.cos(minute_angle));
+        int y2 = y1 + (int)(radius * Math.sin(minute_angle));
+        g.setColor(Color.RED);
+        g.drawLine(x1, y1, x2, y2);
+        // 시침 그리기
+        radius -= 30;
+        double hour_angle = (hour - 3) * Math.PI / 6 + minute_angle / 12;
+        x2 = x1 + (int)(radius * Math.cos(hour_angle));
+        y2 = y1 + (int)(radius * Math.sin(hour_angle));
+        g.setColor(Color.YELLOW);
+        g.drawLine(x1, y1, x2, y2);
+    }
+    
+    /** format2 - 1자리 정수이면 앞에 0을 붙여 문자열로 만들어주는 메소  */
+    private String format2(int number) {
+        if (number < 10)
+            return "0" + number;
+        else
+            return "" + number;
+    }
+    
+}
+```
