@@ -216,7 +216,7 @@ public class Hand {
 
 ### 7.3 2차원 배열 - 실습. 슬라이드 퍼즐 게임
 
-<img src="https://i.imgur.com/3JXF3YS.png" width="600">
+<img src="https://i.imgur.com/lErBEmV.png" width="600">
 
 
 ## 숙제 -  스도쿠 퍼즐 게임 (제출 마감: 10월 20일 수업시작 직전)
