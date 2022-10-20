@@ -33,7 +33,7 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 |  5 | 9/29 [1pm](https://youtu.be/9UvCQokyw6w) [3pm](https://youtu.be/ZnMOUiy6jt0), 9/30 [11am](https://youtu.be/zjCAcffVPV4) [1pm](https://youtu.be/w7L1tTK4GaU) | 제어 구조 1 - 선택: [노트](notes05.md), [슬라이드](slide05.pdf) |  #4 [완성코드](notes05sol.md) |
 |  6 | 10/6 [1pm](https://youtu.be/qWywxvVs2UE) [3pm](https://youtu.be/kL6ATEcXjCY), [10/7](https://youtu.be/CmbXoruK71Q) | 제어 구조 2 - 반복: [노트](notes06.md), [슬라이드](slide06.pdf) |  #5 [완성코드](notes06sol.md) |
 |  7 | 10/13 [1pm](https://youtu.be/pVCSm03JBMw) [3pm](https://youtu.be/HIN5df3llwo), [10/14](https://youtu.be/dTYIUPsaJTo) | 자료 구조 - 배열: [노트](notes07.md), [슬라이드](slide07.pdf), [완성코드](notes07sol.md) | #6 마감 10/27(목) 수업전 |
-|  8 | 10/20 | 코딩시험 1 - [미완성코드](exam1-2022.md) | [기출문제](exam1-2021.pdf), [코드](exam1-2021.md) |
+|  8 | 10/20 | 코딩시험 1 - [미완성+완성코드](exam1-2022.md) | [기출문제](exam1-2021.pdf), [코드](exam1-2021.md) |
 |  9 | 10/27,10/28 | 상속을 활용한 프로그램 부품의 재활용 |  #7  |
 | 10 | 11/3,11/4 | GUI와 이벤트 구동 프로그래밍 | #8 |
 | 11 | 11/10,11/11 | GUI와 이벤트 구동 프로그래밍 (계속) | - |
