@@ -34,7 +34,7 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 |  6 | 10/6 [1pm](https://youtu.be/qWywxvVs2UE) [3pm](https://youtu.be/kL6ATEcXjCY), [10/7](https://youtu.be/CmbXoruK71Q) | 제어 구조 2 - 반복: [노트](notes06.md), [슬라이드](slide06.pdf) |  #5 [완성코드](notes06sol.md) |
 |  7 | 10/13 [1pm](https://youtu.be/pVCSm03JBMw) [3pm](https://youtu.be/HIN5df3llwo), [10/14](https://youtu.be/dTYIUPsaJTo) | 자료 구조 - 배열: [노트](notes07.md), [슬라이드](slide07.pdf), [완성코드](notes07sol.md) | #6 마감 10/27(목) 수업전 |
 |  8 | 10/20 | 코딩시험 1 - [문제](exam1-2022.pdf), [미완성+완성코드](exam1-2022.md) | [기출문제](exam1-2021.pdf), [코드](exam1-2021.md) |
-|  9 | 10/27,10/28 | 인터페이스와 클래스 계층구조: [슬라이드](slide08.pdf), [코드](notes08.md) |  #7  |
+|  9 | [10/27](https://youtu.be/Xu38Yo684Ws),10/28 | 인터페이스와 클래스 계층구조: [슬라이드](slide08.pdf), [코드](notes08.md) |  #7  |
 | 10 | 11/3,11/4 | GUI와 이벤트 구동 프로그래밍 | #8 |
 | 11 | 11/10,11/11 | GUI와 이벤트 구동 프로그래밍 (계속) | - |
 | 12 | 11/17,11/18 | 텍스트 및 파일 처리 | - |
