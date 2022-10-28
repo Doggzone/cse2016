@@ -31,10 +31,10 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 |  3 | 9/15 [3pm](https://youtu.be/bnLpb6BzvXk) ,9/16 [1pm](https://youtu.be/PM9iABnuCLw) | 클래스와 메소드: [노트](notes03.md), [슬라이드](slide03.pdf) | #2 [완성코드](notes03sol.md) |
 |  4 | 9/22 [1pm](https://youtu.be/OwUOWd3ewTI) [3pm](https://youtu.be/wo_gRLLBxJ0), 9/23 [11am](https://youtu.be/oelk6Yyo3uM) [1pm](https://youtu.be/Qai4637GnVI) | 생성 메소드와 필드 변수: [노트](notes04.md), [슬라이드](slide04.pdf) |  #3 [완성코드](notes04sol.md) |
 |  5 | 9/29 [1pm](https://youtu.be/9UvCQokyw6w) [3pm](https://youtu.be/ZnMOUiy6jt0), 9/30 [11am](https://youtu.be/zjCAcffVPV4) [1pm](https://youtu.be/w7L1tTK4GaU) | 제어 구조 1 - 선택: [노트](notes05.md), [슬라이드](slide05.pdf) |  #4 [완성코드](notes05sol.md) |
-|  6 | 10/6 [1pm](https://youtu.be/qWywxvVs2UE) [3pm](https://youtu.be/kL6ATEcXjCY), [10/7](https://youtu.be/CmbXoruK71Q) | 제어 구조 2 - 반복: [노트](notes06.md), [슬라이드](slide06.pdf) |  #5 [완성코드](notes06sol.md) |
-|  7 | 10/13 [1pm](https://youtu.be/pVCSm03JBMw) [3pm](https://youtu.be/HIN5df3llwo), [10/14](https://youtu.be/dTYIUPsaJTo) | 자료 구조 - 배열: [노트](notes07.md), [슬라이드](slide07.pdf), [완성코드](notes07sol.md) | #6 마감 10/27(목) 수업전 |
+|  6 | 10/6 [1pm](https://youtu.be/qWywxvVs2UE) [3pm](https://youtu.be/kL6ATEcXjCY), 10/7 [1pm](https://youtu.be/CmbXoruK71Q) | 제어 구조 2 - 반복: [노트](notes06.md), [슬라이드](slide06.pdf) |  #5 [완성코드](notes06sol.md) |
+|  7 | 10/13 [1pm](https://youtu.be/pVCSm03JBMw) [3pm](https://youtu.be/HIN5df3llwo), 10/14 [1pm](https://youtu.be/dTYIUPsaJTo) | 자료 구조 - 배열: [노트](notes07.md), [슬라이드](slide07.pdf), [완성코드](notes07sol.md) | #6 마감 10/27(목) 수업전 |
 |  8 | 10/20 | 코딩시험 1 - [문제](exam1-2022.pdf), [미완성+완성코드](exam1-2022.md) | [기출문제](exam1-2021.pdf), [코드](exam1-2021.md) |
-|  9 | [10/27](https://youtu.be/Xu38Yo684Ws),10/28 | 인터페이스와 클래스 계층구조: [슬라이드](slide08.pdf), [코드](notes08.md) |  #7 [문제](notes08hw.md): 마감 11/10(목)  |
+|  9 | 10/27 [3pm](https://youtu.be/Xu38Yo684Ws), 10/28 [11am](https://youtu.be/RCuer0xjz-Q) [1pm](https://youtu.be/jEQ7iueJbiw) | 인터페이스와 클래스 계층구조: [슬라이드](slide08.pdf), [코드](notes08.md) |  #7 [문제](notes08hw.md): 마감 11/10(목)  |
 | 10 | 11/3,11/4 | GUI와 이벤트 구동 프로그래밍 | #8 |
 | 11 | 11/10,11/11 | GUI와 이벤트 구동 프로그래밍 (계속) | - |
 | 12 | 11/17,11/18 | 텍스트 및 파일 처리 | - |
