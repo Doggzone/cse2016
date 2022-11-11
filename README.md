@@ -35,13 +35,8 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 |  7 | 10/13 [1pm](https://youtu.be/pVCSm03JBMw) [3pm](https://youtu.be/HIN5df3llwo), 10/14 [1pm](https://youtu.be/dTYIUPsaJTo) | 자료 구조 - 배열: [노트](notes07.md), [슬라이드](slide07.pdf), [완성코드](notes07sol.md) | #6 마감 10/27(목) 수업전 |
 |  8 | 10/20 | 코딩시험 1 - [문제](exam1-2022.pdf), [미완성+완성코드](exam1-2022.md) | [기출문제](exam1-2021.pdf), [코드](exam1-2021.md) |
 |  9 | 10/27 [3pm](https://youtu.be/Xu38Yo684Ws), 10/28 [11am](https://youtu.be/RCuer0xjz-Q) [1pm](https://youtu.be/jEQ7iueJbiw) | 인터페이스와 클래스 계층구조: [슬라이드](slide08.pdf), [코드](notes08.md) |  #7 [문제](notes08hw.md): 마감 11/10(목)  |
-<<<<<<< HEAD
-| 10 | [11/3](https://youtu.be/kZ4iLF0H8wo) | GUI와 이벤트 구동 프로그래밍 1: [슬라이드](slide09.pdf), [코드](notes09.md)| - |
-| 11 | [11/10](https://youtu.be/o9o-PrJnrbY), 11/11 [11am](https://youtu.be/Op2YxC64ee4) [1pm](https://youtu.be/wGcqtqMNTPU) | GUI와 이벤트 구동 프로그래밍 2 | #8 [문제](notes10hw.md) 마감 11/24(목) |
-=======
 | 10 | [11/3](https://youtu.be/kZ4iLF0H8wo) | GUI와 이벤트 구동 프로그래밍 1: [슬라이드](slide09.pdf), [코드](notes09.md), [완성코드](notes09sol.md)| - |
-| 11 | [11/10](https://youtu.be/o9o-PrJnrbY),11/11 | GUI와 이벤트 구동 프로그래밍 2: [슬라이드](slide10.pdf), [코드](notes10.md) | #8 [문제](notes10hw.md) 마감 11/24(목) |
->>>>>>> 6ee4cce343813ab8f4744634597f25b5649ba63f
+| 11 | [11/10](https://youtu.be/o9o-PrJnrbY), 11/11 [11am](https://youtu.be/Op2YxC64ee4) [1pm](https://youtu.be/wGcqtqMNTPU) | GUI와 이벤트 구동 프로그래밍 2: [슬라이드](slide10.pdf), [코드](notes10.md) | #8 [문제](notes10hw.md) 마감 11/24(목) |
 | 12 | 11/17,11/18 | 텍스트 및 파일 처리 | - |
 | 13 | 11/24 | 코딩시험 2 | - |
 | 14 | 12/1,12/2 | 팀프로젝트 제안서 점검 및 확정 | 프로젝트 안내 |
