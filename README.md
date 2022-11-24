@@ -39,7 +39,7 @@ MVC 아키텍처 기반 객체지향 프로그램 설계의 이해 및 숙달
 | 11 | [11/10](https://youtu.be/o9o-PrJnrbY), 11/11 [11am](https://youtu.be/Op2YxC64ee4) [1pm](https://youtu.be/wGcqtqMNTPU) | GUI와 이벤트 구동 프로그래밍 2: [슬라이드](slide10.pdf), [코드](notes10.md) | #8 [문제](notes10hw.md) 마감 11/24(목) |
 | 12 | 11/17 [11am](https://youtu.be/xq63hRTEKGE) [1pm](https://youtu.be/J6_lm9SLuOg), 11/18 [1pm](https://youtu.be/kt5Je8xwsas) [3pm](https://youtu.be/n36VCqX4J0M) | 텍스트 및 파일 처리: [슬라이드](slide11.pdf), [코드](notes11.md) | - |
 | 13 | 11/24 | 코딩시험 2 | [기출문제](exam2-2021.zip) |
-| 14 | 12/1,12/2 | 팀프로젝트 제안서 점검 및 확정 | [팀 구성 설문](https://forms.gle/8DWY4D4MMcwWUh2R8) |
+| 14 | 12/1,12/2 | 팀프로젝트 [안내](project.md), 팀 구성, 요구사항 분석 및 설계 개시 | [팀 구성 설문](https://forms.gle/8DWY4D4MMcwWUh2R8) |
 | 15 | 12/8,12/9 | 팀프로젝트 설계 및 구현 중간 점검 | - |
 | 16 | 12/15,12/16 | 팀프로젝트 최종 발표 및 시연 | - |
 
